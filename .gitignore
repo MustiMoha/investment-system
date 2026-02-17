@@ -20,6 +20,9 @@
 # production
 /build
 
+# local data (admin dashboard db)
+/data
+
 # misc
 .DS_Store
 *.pem
