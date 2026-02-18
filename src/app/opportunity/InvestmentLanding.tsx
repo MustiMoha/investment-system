@@ -1,5 +1,6 @@
 "use client";
 
+// Investment landing page - Finjan / Madak / Falak
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo } from "react";
