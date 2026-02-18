@@ -18,36 +18,36 @@ export default function InvestorsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-lg font-semibold text-[#7d471e]">Manage Investors</h2>
-        <p className="mt-1 text-sm text-slate-600">
+        <h2 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c]">Manage Investors</h2>
+        <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
           Add investors and generate unique, trackable investment links for each one.
         </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
         {/* Create Form */}
-        <div className="rounded-2xl border border-slate-200 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#7d471e]">Add Investor</h3>
-          <p className="mt-1 text-xs text-slate-600">
+        <div className="rounded-2xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
+          <h3 className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">Add Investor</h3>
+          <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
             Capture investor details and instantly generate a unique, trackable link.
           </p>
           <form action={createInvestor} className="mt-4 space-y-3">
             <div className="space-y-1 text-sm">
-              <label className="text-[#7d471e]">Investor Name</label>
+              <label className="text-[#7d471e] dark:text-[#c9a86c]">Investor Name</label>
               <input
                 required
                 name="name"
                 placeholder="Full name"
-                className="w-full rounded-lg border border-slate-700 bg-slate-50 px-3 py-2 text-sm text-[#7d471e] outline-none ring-emerald-500/40 focus:ring-2"
+                className="w-full rounded-lg border border-slate-700 dark:border-zinc-500 bg-slate-50 dark:bg-zinc-700/50 px-3 py-2 text-sm text-[#7d471e] dark:text-[#c9a86c] outline-none ring-emerald-500/40 focus:ring-2"
               />
             </div>
             <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
               <div className="space-y-1 text-sm">
-                <label className="text-[#7d471e]">Country Code</label>
+                <label className="text-[#7d471e] dark:text-[#c9a86c]">Country Code</label>
                 <select
                   required
                   name="countryCode"
-                  className="w-full rounded-lg border border-slate-700 bg-slate-50 px-3 py-2 text-sm text-[#7d471e] outline-none ring-emerald-500/40 focus:ring-2"
+                  className="w-full rounded-lg border border-slate-700 dark:border-zinc-500 bg-slate-50 dark:bg-zinc-700/50 px-3 py-2 text-sm text-[#7d471e] dark:text-[#c9a86c] outline-none ring-emerald-500/40 focus:ring-2"
                 >
                   <option value="">Select</option>
                   {COUNTRIES.map((c) => (
@@ -58,20 +58,20 @@ export default function InvestorsPage() {
                 </select>
               </div>
               <div className="space-y-1 text-sm">
-                <label className="text-[#7d471e]">Mobile Number</label>
+                <label className="text-[#7d471e] dark:text-[#c9a86c]">Mobile Number</label>
                 <input
                   required
                   name="mobile"
                   placeholder="Without leading 0"
-                  className="w-full rounded-lg border border-slate-700 bg-slate-50 px-3 py-2 text-sm text-[#7d471e] outline-none ring-emerald-500/40 focus:ring-2"
+                  className="w-full rounded-lg border border-slate-700 dark:border-zinc-500 bg-slate-50 dark:bg-zinc-700/50 px-3 py-2 text-sm text-[#7d471e] dark:text-[#c9a86c] outline-none ring-emerald-500/40 focus:ring-2"
                 />
               </div>
             </div>
             <div className="space-y-1 text-sm">
-              <label className="text-[#7d471e]">Assign Opportunity</label>
+              <label className="text-[#7d471e] dark:text-[#c9a86c]">Assign Opportunity</label>
               <select
                 name="opportunityId"
-                className="w-full rounded-lg border border-slate-700 bg-slate-50 px-3 py-2 text-sm text-[#7d471e] outline-none ring-emerald-500/40 focus:ring-2"
+                className="w-full rounded-lg border border-slate-700 dark:border-zinc-500 bg-slate-50 dark:bg-zinc-700/50 px-3 py-2 text-sm text-[#7d471e] dark:text-[#c9a86c] outline-none ring-emerald-500/40 focus:ring-2"
               >
                 <option value="">Unassigned</option>
                 {db.opportunities.map((o) => (
@@ -82,12 +82,12 @@ export default function InvestorsPage() {
               </select>
             </div>
             <div className="space-y-1 text-sm">
-              <label className="text-[#7d471e]">Notes (optional)</label>
+              <label className="text-[#7d471e] dark:text-[#c9a86c]">Notes (optional)</label>
               <textarea
                 name="notes"
                 rows={2}
                 placeholder="Investor preferences, ticket size, etc."
-                className="w-full rounded-lg border border-slate-700 bg-slate-50 px-3 py-2 text-sm text-[#7d471e] outline-none ring-emerald-500/40 focus:ring-2"
+                className="w-full rounded-lg border border-slate-700 dark:border-zinc-500 bg-slate-50 dark:bg-zinc-700/50 px-3 py-2 text-sm text-[#7d471e] dark:text-[#c9a86c] outline-none ring-emerald-500/40 focus:ring-2"
               />
             </div>
             <button
@@ -100,21 +100,21 @@ export default function InvestorsPage() {
         </div>
 
         {/* Investors List */}
-        <div className="rounded-2xl border border-slate-200 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#7d471e]">
+        <div className="rounded-2xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
+          <h3 className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
             All Investors & Unique Links
           </h3>
           {db.investors.length === 0 ? (
-            <p className="mt-3 text-xs text-[#7d471e]0">
+            <p className="mt-3 text-xs text-[#7d471e] dark:text-[#c9a86c]">
               No investors yet. Use the form to add your first investor and generate a
               personalized link.
             </p>
           ) : (
             <div className="mt-3 overflow-x-auto">
-              <div className="overflow-hidden rounded-xl border border-slate-200">
+              <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-500">
                 <table className="min-w-full border-separate border-spacing-0 text-xs">
                   <thead>
-                    <tr className="bg-slate-50 text-slate-600">
+                    <tr className="bg-slate-50 dark:bg-zinc-700/50 text-slate-600 dark:text-slate-400">
                       <th className="px-3 py-2 text-left font-medium">Investor</th>
                       <th className="px-3 py-2 text-left font-medium">Mobile</th>
                       <th className="px-3 py-2 text-left font-medium">Opportunity</th>
@@ -134,20 +134,20 @@ export default function InvestorsPage() {
                       return (
                         <tr
                           key={inv.id}
-                          className="border-t border-slate-200 align-top"
+                          className="border-t border-slate-200 dark:border-zinc-500 align-top"
                         >
-                          <td className="px-3 py-2 text-[#7d471e]">
+                          <td className="px-3 py-2 text-[#7d471e] dark:text-[#c9a86c]">
                             <div className="font-medium">{inv.name}</div>
                             {inv.notes && (
-                              <div className="mt-0.5 text-[11px] text-[#7d471e]0">
+                              <div className="mt-0.5 text-[11px] text-[#7d471e] dark:text-[#c9a86c]">
                                 {inv.notes}
                               </div>
                             )}
                           </td>
-                          <td className="px-3 py-2 text-slate-600">
+                          <td className="px-3 py-2 text-slate-600 dark:text-slate-400">
                             +{inv.countryCode} {inv.mobile}
                           </td>
-                          <td className="px-3 py-2 text-slate-600">
+                          <td className="px-3 py-2 text-slate-600 dark:text-slate-400">
                             {opp ? opp.name : "Unassigned"}
                           </td>
                           <td className="px-3 py-2">
@@ -169,7 +169,7 @@ export default function InvestorsPage() {
                             >
                               <button
                                 type="submit"
-                                className="mt-1 text-[11px] text-[#7d471e]0 underline underline-offset-2 hover:text-[#cda22b]"
+                                className="mt-1 text-[11px] text-[#7d471e] dark:text-[#c9a86c] underline underline-offset-2 hover:text-[#cda22b]"
                               >
                                 Regenerate
                               </button>

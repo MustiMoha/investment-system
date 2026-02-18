@@ -21,19 +21,19 @@ export default function AdminDashboard() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-lg font-semibold text-[#7d471e]">Dashboard Overview</h2>
-        <p className="mt-1 text-sm text-slate-600">
+        <h2 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c]">Dashboard Overview</h2>
+        <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
           Quick overview of your investment distribution system
         </p>
       </div>
 
       {/* Stats Grid */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-        <div className="rounded-xl border border-slate-200 bg-white p-4">
-          <div className="text-xs uppercase tracking-[0.2em] text-slate-600">
+        <div className="rounded-xl border border-slate-200 dark:border-zinc-600 bg-white dark:bg-zinc-700 p-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
             Opportunities
           </div>
-          <div className="mt-2 text-2xl font-semibold text-[#7d471e]">
+          <div className="mt-2 text-2xl font-semibold text-[#7d471e] dark:text-[#c9a86c]">
             {stats.totalOpportunities}
           </div>
           <Link
@@ -44,11 +44,11 @@ export default function AdminDashboard() {
           </Link>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-4">
-          <div className="text-xs uppercase tracking-[0.2em] text-slate-600">
+        <div className="rounded-xl border border-slate-200 dark:border-zinc-600 bg-white dark:bg-zinc-700 p-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
             Total Investors
           </div>
-          <div className="mt-2 text-2xl font-semibold text-[#7d471e]">
+          <div className="mt-2 text-2xl font-semibold text-[#7d471e] dark:text-[#c9a86c]">
             {stats.totalInvestors}
           </div>
           <Link
@@ -59,14 +59,14 @@ export default function AdminDashboard() {
           </Link>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-4">
-          <div className="text-xs uppercase tracking-[0.2em] text-slate-600">
+        <div className="rounded-xl border border-slate-200 dark:border-zinc-600 bg-white dark:bg-zinc-700 p-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
             Assigned
           </div>
-          <div className="mt-2 text-2xl font-semibold text-[#7d471e]">
+          <div className="mt-2 text-2xl font-semibold text-[#7d471e] dark:text-[#c9a86c]">
             {stats.assignedInvestors}
           </div>
-          <div className="mt-2 text-xs text-[#7d471e]0">
+          <div className="mt-2 text-xs text-[#7d471e] dark:text-[#c9a86c]">
             {stats.totalInvestors > 0
               ? Math.round((stats.assignedInvestors / stats.totalInvestors) * 100)
               : 0}
@@ -74,11 +74,11 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-4">
-          <div className="text-xs uppercase tracking-[0.2em] text-slate-600">
+        <div className="rounded-xl border border-slate-200 dark:border-zinc-600 bg-white dark:bg-zinc-700 p-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
             Total Clicks
           </div>
-          <div className="mt-2 text-2xl font-semibold text-[#7d471e]">
+          <div className="mt-2 text-2xl font-semibold text-[#7d471e] dark:text-[#c9a86c]">
             {stats.totalClicks}
           </div>
           <Link
@@ -89,14 +89,14 @@ export default function AdminDashboard() {
           </Link>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-4">
-          <div className="text-xs uppercase tracking-[0.2em] text-slate-600">
+        <div className="rounded-xl border border-slate-200 dark:border-zinc-600 bg-white dark:bg-zinc-700 p-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
             CTA Clicks
           </div>
           <div className="mt-2 text-2xl font-semibold text-[#cda22b]">
             {stats.totalCtaClicks}
           </div>
-          <div className="mt-2 text-xs text-[#7d471e]0">
+          <div className="mt-2 text-xs text-[#7d471e] dark:text-[#c9a86c]">
             {stats.totalClicks > 0
               ? Math.round((stats.totalCtaClicks / stats.totalClicks) * 100)
               : 0}
@@ -107,24 +107,24 @@ export default function AdminDashboard() {
 
       {/* Quick Actions */}
       <div className="grid gap-4 md:grid-cols-2">
-        <div className="rounded-xl border border-slate-200 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#7d471e]">Quick Actions</h3>
+        <div className="rounded-xl border border-slate-200 dark:border-zinc-600 bg-white dark:bg-zinc-700 p-5">
+          <h3 className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">Quick Actions</h3>
           <div className="mt-4 space-y-2">
             <Link
               href="/admin/opportunities"
-              className="block rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-[#7d471e] transition hover:bg-slate-100 hover:text-[#cda22b]"
+              className="block rounded-lg border border-slate-200 dark:border-zinc-600 bg-slate-50 dark:bg-zinc-700/50 px-4 py-3 text-sm font-medium text-[#7d471e] dark:text-[#c9a86c] transition hover:bg-slate-100 dark:hover:bg-zinc-600 hover:text-[#cda22b]"
             >
               ⊕ Create New Opportunity
             </Link>
             <Link
               href="/admin/investors"
-              className="block rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-[#7d471e] transition hover:bg-slate-100 hover:text-[#cda22b]"
+              className="block rounded-lg border border-slate-200 dark:border-zinc-600 bg-slate-50 dark:bg-zinc-700/50 px-4 py-3 text-sm font-medium text-[#7d471e] dark:text-[#c9a86c] transition hover:bg-slate-100 dark:hover:bg-zinc-600 hover:text-[#cda22b]"
             >
               ○ Add New Investor
             </Link>
             <Link
               href="/admin/analytics"
-              className="block rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-[#7d471e] transition hover:bg-slate-100 hover:text-[#cda22b]"
+              className="block rounded-lg border border-slate-200 dark:border-zinc-600 bg-slate-50 dark:bg-zinc-700/50 px-4 py-3 text-sm font-medium text-[#7d471e] dark:text-[#c9a86c] transition hover:bg-slate-100 dark:hover:bg-zinc-600 hover:text-[#cda22b]"
             >
               ▥ View Detailed Analytics
             </Link>
@@ -132,9 +132,9 @@ export default function AdminDashboard() {
         </div>
 
         {/* Recent Investors */}
-        <div className="rounded-xl border border-slate-200 bg-white p-5">
+        <div className="rounded-xl border border-slate-200 dark:border-zinc-600 bg-white dark:bg-zinc-700 p-5">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-semibold text-[#7d471e]">
+            <h3 className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
               Recent Investors
             </h3>
             <Link
@@ -145,7 +145,7 @@ export default function AdminDashboard() {
             </Link>
           </div>
           {recentInvestors.length === 0 ? (
-            <p className="mt-4 text-xs text-[#7d471e]0">
+            <p className="mt-4 text-xs text-[#7d471e] dark:text-[#c9a86c]">
               No investors yet. Add your first investor to get started.
             </p>
           ) : (
@@ -157,18 +157,18 @@ export default function AdminDashboard() {
                 return (
                   <div
                     key={inv.id}
-                    className="rounded-lg border border-slate-200 bg-slate-50 p-3"
+                    className="rounded-lg border border-slate-200 dark:border-zinc-600 bg-slate-50 dark:bg-zinc-700/50 p-3"
                   >
                     <div className="flex items-start justify-between">
                       <div>
-                        <div className="text-sm font-medium text-[#7d471e]">
+                        <div className="text-sm font-medium text-[#7d471e] dark:text-[#c9a86c]">
                           {inv.name}
                         </div>
-                        <div className="mt-1 text-xs text-slate-600">
+                        <div className="mt-1 text-xs text-slate-600 dark:text-slate-400">
                           +{inv.countryCode} {inv.mobile}
                         </div>
                         {opp && (
-                          <div className="mt-1 text-xs text-[#7d471e]0">
+                          <div className="mt-1 text-xs text-[#7d471e] dark:text-[#c9a86c]">
                             {opp.name}
                           </div>
                         )}
