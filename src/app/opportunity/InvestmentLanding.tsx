@@ -58,45 +58,47 @@ export default function InvestmentLanding({
     >
       <SetRtl lang={liveLang} />
       <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-16 pt-8 md:px-8 lg:px-12">
-        {/* Top-right: Language toggle + optional ref */}
-        <div className="absolute top-4 right-4 flex items-center gap-3 md:right-8 lg:right-12">
+        {/* Top: Theme toggle left, Language + ref right (mobile symmetry) */}
+        <div className="absolute top-4 left-4 right-4 flex items-center justify-between md:left-8 md:right-8 lg:left-12 lg:right-12">
           <ThemeToggle />
+          <div className="flex items-center gap-3">
           {liveRefCode && (
             <span className="rounded-full border border-emerald-300 bg-white dark:bg-[var(--dark-surface)] px-3 py-1 text-xs text-[#cda22b] dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface)] dark:text-[var(--dark-accent)]">
               {t.personalizedLink} {liveRefCode}
             </span>
           )}
           <LanguageToggle currentLang={liveLang} refCode={liveRefCode} />
+          </div>
         </div>
 
-        {/* Center-aligned logos */}
-        <header className="flex justify-center border-b border-slate-200 dark:border-[var(--dark-border)] pb-8 pt-2 bg-gradient-to-r from-transparent via-amber-50/40 to-transparent dark:border-[var(--dark-border)] dark:via-[var(--dark-surface)]/50">
-          <div className="grid grid-cols-2 place-items-center md:flex md:flex-nowrap md:items-center md:justify-center gap-4 sm:gap-8 md:gap-14 lg:gap-20">
+        {/* Center-aligned logos - mobile: ~1/3 screen height */}
+        <header className="flex min-h-[33vh] justify-center border-b border-slate-200 dark:border-[var(--dark-border)] py-6 pb-8 pt-2 md:min-h-0 md:py-2 bg-gradient-to-r from-transparent via-amber-50/40 to-transparent dark:border-[var(--dark-border)] dark:via-[var(--dark-surface)]/50">
+          <div className="grid w-full max-w-md grid-cols-2 place-items-center gap-6 md:max-w-none md:flex md:flex-nowrap md:items-center md:justify-center md:gap-14 lg:gap-20">
             <a href="https://finjan.vc" target="_blank" rel="noopener noreferrer" className="order-1 flex shrink-0 items-center justify-self-center md:justify-self-auto">
-              <div className="relative h-[3.48rem] w-[3.48rem] shrink-0 sm:h-[4.64rem] sm:w-[4.64rem] md:h-[7.54rem] md:w-[7.54rem] lg:h-[9.05rem] lg:w-[9.05rem]">
+              <div className="relative h-[14vh] min-h-[4.5rem] w-[14vh] min-w-[4.5rem] shrink-0 sm:h-[4.64rem] sm:min-h-0 sm:w-[4.64rem] sm:min-w-0 md:h-[7.54rem] md:w-[7.54rem] lg:h-[9.05rem] lg:w-[9.05rem]">
                 <Image
                   src="/finjan-logo.png"
                   alt="Finjan"
                   fill
                   className="object-contain"
                   priority
-                  sizes="145px"
+                  sizes="(max-width: 768px) 25vw, 145px"
                 />
               </div>
             </a>
             <a href={madakUrl} target="_blank" rel="noopener noreferrer" className="order-3 col-span-2 flex shrink-0 items-center justify-center md:order-2 md:col-span-1 md:justify-self-auto">
-              <div className="relative h-10 w-14 shrink-0 sm:h-14 sm:w-20 md:h-24 md:w-36">
+              <div className="relative h-[12vh] min-h-[4rem] w-[20vh] min-w-[6rem] shrink-0 sm:h-14 sm:min-h-0 sm:w-20 sm:min-w-0 md:h-24 md:w-36">
                 <Image
                   src="/madak-logo.png"
                   alt="Madak"
                   fill
                   className="object-contain object-center"
-                  sizes="144px"
+                  sizes="(max-width: 768px) 35vw, 144px"
                 />
               </div>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer" className="order-2 flex shrink-0 items-center justify-self-center md:order-3 md:justify-self-auto">
-              <div className="relative h-10 w-10 shrink-0 sm:h-14 sm:w-14 md:h-24 md:w-24">
+              <div className="relative h-[14vh] min-h-[4.5rem] w-[14vh] min-w-[4.5rem] shrink-0 sm:h-14 sm:min-h-0 sm:w-14 sm:min-w-0 md:h-24 md:w-24">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/falak-logo.png"
