@@ -11,7 +11,10 @@ import LanguageToggle from "@/components/LanguageToggle";
 import SetRtl from "@/components/SetRtl";
 
 const PRIMARY_WHATSAPP_INTEREST =
-  "https://wa.me/97455518955?text=Hi%20there%20Im%20interested%20in%20this%20deal";
+  "https://wa.me/97455518955?text=" +
+  encodeURIComponent(
+    "Hello Finjan Team. I am confirming my interest in participating in this investment. Here are my details:\n\nname:\nemail:"
+  );
 
 const FINJAN_WHATSAPP = "https://wa.me/97455518955";
 
@@ -40,63 +43,91 @@ export default function InvestmentLanding({
 
   const t = translations[liveLang];
   const isRtl = liveLang === "ar";
+  const madakUrl =
+    liveLang === "ar" ? "https://www.madak.app" : "https://www.madak.app/en";
   const SAUDI_RIYAL = liveLang === "ar" ? SAUDI_RIYAL_AR : SAUDI_RIYAL_EN;
   const QATARI_RIYAL = liveLang === "ar" ? QATARI_RIYAL_AR : QATARI_RIYAL_EN;
 
   return (
     <div
-      className="min-h-screen bg-white text-[#7d471e]"
+      className="min-h-screen bg-gradient-to-b from-amber-50/30 via-white to-emerald-50/20 text-[#7d471e]"
       dir={isRtl ? "rtl" : "ltr"}
       lang={liveLang}
     >
       <SetRtl lang={liveLang} />
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-16 pt-8 md:px-8 lg:px-12">
-        {/* Top nav / brand */}
-        <header className="flex items-center justify-between gap-4 border-b border-slate-200 pb-4">
-          <div className="flex items-center gap-3">
-            <div className="relative h-16 w-16 flex-shrink-0">
-              <Image
-                src="/finjan-logo.png"
-                alt="Finjan Logo"
-                fill
-                className="object-contain"
-                priority
-                sizes="64px"
-              />
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#cda22b]">
-                Finjan.vc
-              </p>
-              <p className="text-sm text-slate-600">{t.brandTagline}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-3 text-xs font-medium text-[#7d471e]">
-            <LanguageToggle currentLang={liveLang} refCode={liveRefCode} />
-            <span className="hidden rounded-full border border-slate-300 bg-white px-3 py-1 md:inline-block">
-              {t.professionalOnly}
+      <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-16 pt-8 md:px-8 lg:px-12">
+        {/* Top-right: Language toggle + optional ref */}
+        <div className="absolute top-4 right-4 flex items-center gap-3 md:right-8 lg:right-12">
+          {liveRefCode && (
+            <span className="rounded-full border border-emerald-300 bg-white px-3 py-1 text-xs text-[#cda22b]">
+              {t.personalizedLink} {liveRefCode}
             </span>
-            {liveRefCode && (
-              <span className="hidden rounded-full border border-emerald-300 bg-white px-3 py-1 text-[#cda22b] md:inline-block">
-                {t.personalizedLink} {liveRefCode}
-              </span>
-            )}
+          )}
+          <LanguageToggle currentLang={liveLang} refCode={liveRefCode} />
+        </div>
+
+        {/* Center-aligned logos */}
+        <header className="flex justify-center border-b border-slate-200 pb-8 pt-2 bg-gradient-to-r from-transparent via-amber-50/40 to-transparent">
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 lg:gap-20">
+            <a href="https://finjan.vc" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <div className="relative h-[6.5rem] w-[6.5rem] flex-shrink-0 md:h-[7.8rem] md:w-[7.8rem]">
+                <Image
+                  src="/finjan-logo.png"
+                  alt="Finjan"
+                  fill
+                  className="object-contain"
+                  priority
+                  sizes="125px"
+                />
+              </div>
+            </a>
+            <a href={madakUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <div className="relative h-20 w-28 flex-shrink-0 md:h-24 md:w-36">
+                <Image
+                  src="/madak-logo.png"
+                  alt="Madak"
+                  fill
+                  className="object-contain object-center"
+                  sizes="144px"
+                />
+              </div>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <div className="relative h-20 w-20 flex-shrink-0 md:h-24 md:w-24">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/falak-logo.png"
+                  alt="Falak"
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            </a>
           </div>
         </header>
 
         {/* Hero */}
         <main className="mt-10 grid flex-1 gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start">
           <section className="space-y-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white px-3 py-1 text-xs font-medium text-[#cda22b]">
-              <span className="h-1.5 w-1.5 rounded-full bg-white0 animate-pulse" />
-              {t.liveBadge}
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-gradient-to-r from-emerald-50 to-amber-50/60 px-3 py-1 text-xs font-medium text-[#cda22b] shadow-[0_0_12px_rgba(16,185,129,0.2)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_6px_rgba(16,185,129,0.6)]" />
+                {t.liveBadge}
+              </div>
+              <span className="rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-medium text-[#7d471e]">
+                {t.professionalOnly}
+              </span>
             </div>
             <div className="space-y-4">
               <h1 className="text-balance text-4xl font-semibold tracking-tight text-[#7d471e] sm:text-5xl lg:text-6xl">
                 {t.heroTitle1}{" "}
-                <span className="bg-gradient-to-r from-[#cda22b] via-[#9db47e] to-[#9db47e] bg-clip-text text-transparent">
+                <a
+                  href={madakUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-[#cda22b] via-[#9db47e] to-[#9db47e] bg-clip-text text-transparent hover:underline"
+                >
                   {t.heroTitle2}
-                </span>
+                </a>
                 : {t.heroTitle3}{" "}
                 <span className="bg-gradient-to-r from-[#cda22b] via-[#9db47e] to-[#9db47e] bg-clip-text text-transparent">
                   {t.heroTitle4}
@@ -111,7 +142,7 @@ export default function InvestmentLanding({
                 href={PRIMARY_WHATSAPP_INTEREST}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-700"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-700 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/40 transition hover:shadow-emerald-500/50 hover:shadow-xl"
               >
                 {t.expressInterest}
               </a>
@@ -127,114 +158,48 @@ export default function InvestmentLanding({
                 {t.ticketPricingTitle}
               </h2>
               <p className="text-lg font-medium text-[#7d471e]">{t.ticketCount}</p>
-              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-                <div className="grid border-b border-slate-200 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-                  {/* Key figures */}
-                  <div className="border-slate-200 bg-slate-50/50 p-5 md:border-e">
-                    <div className="space-y-3">
-                      <div className="flex justify-between gap-4 md:flex-col">
-                        <span className="text-xs uppercase tracking-[0.15em] text-slate-600">
-                          {t.ticketLabel}
-                        </span>
-                        <span className="text-lg font-semibold tabular-nums text-[#7d471e]">
-                          {QATARI_RIYAL} 25,000 <span className="text-sm font-normal text-slate-500">({qarToUsd(25000)})</span>
-                        </span>
-                      </div>
-                      <div className="flex justify-between gap-4 border-t border-slate-200 pt-3 md:flex-col">
-                        <span className="text-xs uppercase tracking-[0.15em] text-slate-600">
-                          {t.netInvestLabel}
-                        </span>
-                        <span className="text-lg font-semibold tabular-nums text-[#7d471e]">
-                          {QATARI_RIYAL} 21,900 <span className="text-sm font-normal text-slate-500">({qarToUsd(21900)})</span>
-                        </span>
-                      </div>
-                      <div className="flex justify-between gap-4 border-t border-slate-200 pt-3 md:flex-col">
-                        <span className="text-xs uppercase tracking-[0.15em] text-slate-600">
-                          {t.spvLabel}
-                        </span>
-                        <span className="text-lg font-semibold tabular-nums text-[#7d471e]">
-                          {QATARI_RIYAL} 3,100 <span className="text-sm font-normal text-slate-500">({qarToUsd(3100)})</span>
-                        </span>
-                      </div>
-                    </div>
+              <p className="text-sm text-slate-600">
+                {t.ticketsPurchased}, {t.ticketsRemaining}.
+              </p>
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-gradient-to-br from-white to-slate-50/50 shadow-[0_0_20px_-8px_rgba(125,71,30,0.08)]">
+                <div className="grid gap-4 border-slate-200 p-5 sm:grid-cols-3">
+                  <div className="flex flex-col rounded-lg bg-slate-50/50 p-4">
+                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600">{t.ticketLabel}</span>
+                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e]">
+                      {QATARI_RIYAL} 25,000
+                    </span>
                   </div>
-                  {/* Pricing scenarios */}
-                  <div className="overflow-x-auto">
-                    <table className="w-full min-w-[280px] border-collapse text-sm">
-                      <thead>
-                        <tr className="border-b border-slate-200 bg-slate-50/50">
-                          <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.15em] text-slate-600" />
-                          <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#7d471e]">
-                            {t.scenarioF}
-                          </th>
-                          <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#7d471e]">
-                            {t.scenarioG}
-                          </th>
-                          <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[#7d471e]">
-                            {t.scenarioW}
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="text-[#7d471e]">
-                        <tr className="border-b border-slate-100">
-                          <td className="px-4 py-3 text-slate-600">
-                            {t.mgmtPctLabel}
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            3.75%
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            4.50%
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            7.50%
-                          </td>
-                        </tr>
-                        <tr className="border-b border-slate-100">
-                          <td className="px-4 py-3 text-slate-600">
-                            {t.mgmtQafLabel}
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            {QATARI_RIYAL} 937.5 <span className="text-slate-500">({qarToUsd(937.5)})</span>
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            {QATARI_RIYAL} 1,125 <span className="text-slate-500">({qarToUsd(1125)})</span>
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            {QATARI_RIYAL} 1,875 <span className="text-slate-500">({qarToUsd(1875)})</span>
-                          </td>
-                        </tr>
-                        <tr className="border-b border-slate-100">
-                          <td className="px-4 py-3 text-slate-600">
-                            {t.ticketLabel}
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            {QATARI_RIYAL} 25,000 <span className="text-slate-500">({qarToUsd(25000)})</span>
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            {QATARI_RIYAL} 25,000 <span className="text-slate-500">({qarToUsd(25000)})</span>
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums">
-                            {QATARI_RIYAL} 25,000 <span className="text-slate-500">({qarToUsd(25000)})</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="px-4 py-3 font-medium text-[#7d471e]">
-                            {t.totalTicketLabel}
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums font-semibold text-[#cda22b]">
-                            {QATARI_RIYAL} 25,937.5 <span className="text-slate-500 font-normal">({qarToUsd(25937.5)})</span>
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums font-semibold text-[#cda22b]">
-                            {QATARI_RIYAL} 26,125 <span className="text-slate-500 font-normal">({qarToUsd(26125)})</span>
-                          </td>
-                          <td className="px-4 py-3 text-center tabular-nums font-semibold text-[#cda22b]">
-                            {QATARI_RIYAL} 26,875 <span className="text-slate-500 font-normal">({qarToUsd(26875)})</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div className="flex flex-col rounded-lg bg-slate-50/50 p-4">
+                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600">{t.netInvestLabel}</span>
+                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e]">
+                      {QATARI_RIYAL} 21,900
+                    </span>
                   </div>
+                  <div className="flex flex-col rounded-lg bg-slate-50/50 p-4">
+                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600">{t.spvLabel}</span>
+                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e]">
+                      {QATARI_RIYAL} 3,100
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-5 rounded-xl border-2 border-amber-200/80 bg-gradient-to-br from-amber-50/70 via-white to-emerald-50/50 p-5 shadow-[0_0_28px_-8px_rgba(205,162,43,0.2),inset_0_0_0_1px_rgba(205,162,43,0.08)]">
+                <p className="text-base font-medium text-[#7d471e]">{t.membershipNote}</p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <a
+                    href={FINJAN_WHATSAPP}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-700 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 transition hover:shadow-emerald-500/40"
+                  >
+                    {t.contactWhatsApp}
+                  </a>
+                  <a
+                    href="mailto:info@finjan.vc"
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-amber-300/80 bg-white px-6 py-2.5 text-sm font-semibold text-[#7d471e] shadow-sm transition hover:border-[#cda22b] hover:bg-amber-50/50"
+                  >
+                    {t.contactEmail}
+                  </a>
                 </div>
               </div>
             </section>
@@ -266,7 +231,7 @@ export default function InvestmentLanding({
                       {t.fundraisingAsk}
                     </span>
                     <span className="text-xl font-bold text-[#cda22b]">
-                      $320K
+                      $150K
                     </span>
                   </div>
                 </div>
@@ -277,14 +242,37 @@ export default function InvestmentLanding({
             <div
               role="separator"
               aria-label={t.overviewOfMadak}
-              className="border-t-2 border-b-2 border-slate-400 bg-slate-200/60 px-6 py-8"
+              className="border-t-2 border-b-2 border-slate-300 bg-gradient-to-r from-slate-100 via-amber-50/50 to-slate-100 px-6 py-8"
             >
-              <h2 className="text-3xl font-bold tracking-tight text-[#7d471e] sm:text-4xl">
-                {t.overviewOfMadak}
-              </h2>
-              <p className="mt-3 max-w-2xl text-base font-bold leading-relaxed text-slate-800">
-                {t.madakSectionSubtitle}
-              </p>
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight text-[#7d471e] sm:text-4xl">
+                    {t.overviewOfMadak}
+                  </h2>
+                  <p className="mt-3 max-w-2xl text-base font-bold leading-relaxed text-slate-800">
+                    {t.madakSectionSubtitle}
+                  </p>
+                </div>
+                <a
+                  href={madakUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 rounded-xl border border-amber-200/80 bg-gradient-to-r from-white to-amber-50/40 px-5 py-3 shadow-[0_0_16px_-6px_rgba(205,162,43,0.15)] transition hover:border-[#cda22b]/60 hover:shadow-[0_0_24px_-8px_rgba(205,162,43,0.25)]"
+                >
+                  <div className="relative h-10 w-24 flex-shrink-0">
+                    <Image
+                      src="/madak-logo.png"
+                      alt="Madak"
+                      fill
+                      className="object-contain object-left"
+                      sizes="96px"
+                    />
+                  </div>
+                  <span className="text-sm font-medium text-[#7d471e]">
+                    {t.visitMadak} →
+                  </span>
+                </a>
+              </div>
             </div>
 
             {/* Madak's Key Metrics - first section under Overview of Madak */}
@@ -331,13 +319,13 @@ export default function InvestmentLanding({
             </section>
 
             {/* Key Highlights - Madak platform (4 cards, balanced) */}
-            <div className="grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="flex flex-col items-center justify-center rounded-xl border border-emerald-200 bg-white p-4 text-center">
+            <div className="grid gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50/50 p-6 shadow-[0_0_30px_-10px_rgba(205,162,43,0.08)] sm:grid-cols-2 lg:grid-cols-4">
+              <div className="flex flex-col items-center justify-center rounded-xl border border-emerald-200/80 bg-gradient-to-br from-emerald-50/60 to-white p-4 text-center shadow-[inset_0_0_20px_-10px_rgba(16,185,129,0.15)]">
                 <div className="text-2xl font-bold text-[#cda22b]">1st</div>
                 <div className="mt-1 text-xs text-slate-600">{t.licensedPlatform}</div>
                 <div className="mt-0.5 text-xs text-slate-500">{t.inSaudiArabia}</div>
               </div>
-              <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 bg-white p-4 text-center">
+              <div className="flex flex-col items-center justify-center rounded-xl border border-amber-200/60 bg-gradient-to-br from-amber-50/40 to-white p-4 text-center">
                 <div className="text-2xl font-bold text-[#7d471e]">100%</div>
                 <div className="mt-1 text-xs text-slate-600">{t.digitalPlatform}</div>
                 <div className="mt-0.5 text-xs text-slate-500">{t.fullyAutomated}</div>
@@ -370,7 +358,8 @@ export default function InvestmentLanding({
                   <div className="mt-1 text-xs text-slate-600">
                     {t.growingUserBase}
                   </div>
-                  <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full bg-emerald-200/50 blur-2xl" />
+                  <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-emerald-300/40 blur-2xl" />
+                  <div className="absolute -bottom-2 -left-2 h-16 w-16 rounded-full bg-amber-200/30 blur-xl" />
                 </div>
                 <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white p-5">
                   <div className="text-xs uppercase tracking-[0.15em] text-slate-600">
@@ -409,7 +398,7 @@ export default function InvestmentLanding({
               <h3 className="text-lg font-semibold text-[#7d471e]">
                 {t.madakInvestmentPerformance}
               </h3>
-              <div className="rounded-xl border border-slate-200 bg-white p-6">
+              <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-white to-amber-50/30 p-6 shadow-[0_0_24px_-10px_rgba(205,162,43,0.06)]">
                 <div className="grid gap-6 md:grid-cols-3">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-[#cda22b]">
@@ -431,11 +420,6 @@ export default function InvestmentLanding({
                       {t.investorsParticipated}
                     </div>
                   </div>
-                </div>
-                <div className="mt-6 flex items-center justify-center rounded-lg bg-slate-50 px-4 py-2">
-                  <span className="text-xs text-slate-600">
-                    {t.fastestClosed}
-                  </span>
                 </div>
               </div>
             </section>
@@ -496,54 +480,15 @@ export default function InvestmentLanding({
               <h3 className="text-lg font-semibold text-[#7d471e]">
                 {t.problemMadakSolves}
               </h3>
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-xl border border-red-200 bg-white p-5">
-                  <div className="mb-2 text-base text-red-600">×</div>
-                  <p className="text-sm font-semibold text-red-700">
-                    {t.forInvestors}
-                  </p>
-                  <ul className="mt-2 space-y-1.5 text-sm text-[#7d471e]">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1">•</span>
-                      <span>{t.problemInvestors1}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1">•</span>
-                      <span>{t.problemInvestors2}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1">•</span>
-                      <span>{t.problemInvestors3}</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="rounded-xl border border-orange-200 bg-white p-5">
-                  <div className="mb-2 text-base text-red-600">×</div>
-                  <p className="text-sm font-semibold text-orange-700">
-                    {t.forDevelopers}
-                  </p>
-                  <ul className="mt-2 space-y-1.5 text-sm text-[#7d471e]">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1">•</span>
-                      <span>{t.problemDevs1}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1">•</span>
-                      <span>{t.problemDevs2}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1">•</span>
-                      <span>{t.problemDevs3}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <p className="text-sm leading-relaxed text-[#7d471e]">
+                {t.problemSummary}
+              </p>
             </section>
 
             {/* Solution */}
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-[#7d471e]">{t.madakSolution}</h3>
-              <div className="rounded-xl border border-emerald-200 bg-white p-5">
+              <div className="rounded-xl border border-emerald-200/80 bg-gradient-to-br from-emerald-50/40 to-white p-5 shadow-[0_0_24px_-10px_rgba(16,185,129,0.1)]">
                 <div className="mb-3 text-lg text-emerald-600">✓</div>
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>
@@ -778,7 +723,7 @@ export default function InvestmentLanding({
                   <div className="flex items-center gap-3">
                     <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
                       <Image
-                        src="/team/hussain-hamed-aldeen.png"
+                        src="/team/abdulaziz-alardi.png"
                         alt="Hussain Hameed Aldeen"
                         fill
                         className="object-cover"
@@ -808,7 +753,7 @@ export default function InvestmentLanding({
                   <div className="flex items-center gap-3">
                     <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
                       <Image
-                        src="/team/abdulaziz-alardi.png"
+                        src="/team/hussain-hamed-aldeen.png"
                         alt="Abdulaziz Alardi"
                         fill
                         className="object-cover"
@@ -837,56 +782,26 @@ export default function InvestmentLanding({
               </div>
             </section>
 
-            {/* Risk & Mitigation */}
+            {/* Recognition */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">
-                {t.madakRiskMitigation}
-              </h3>
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-xl border border-slate-200 bg-white p-5">
-                  <p className="text-sm font-semibold text-[#7d471e]">{t.keyRisks}</p>
-                  <ul className="mt-3 space-y-2 text-xs text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <span>•</span>
-                      <span>{t.risk1}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>•</span>
-                      <span>{t.risk2}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>•</span>
-                      <span>{t.risk3}</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="rounded-xl border border-slate-200 bg-white p-5">
-                  <p className="text-sm font-semibold text-[#7d471e]">
-                    {t.mitigationLevers}
-                  </p>
-                  <ul className="mt-3 space-y-2 text-xs text-slate-600">
-                    <li className="flex items-start gap-2">
-                      <span>•</span>
-                      <span>{t.mitigation1}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>•</span>
-                      <span>{t.mitigation2}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span>•</span>
-                      <span>{t.mitigation3}</span>
-                    </li>
-                  </ul>
-                </div>
+              <h3 className="text-lg font-semibold text-[#7d471e]">{t.recognition}</h3>
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-6">
+                <Image
+                  src="/recognition-logos.png"
+                  alt="Recognition - partner and institutional logos"
+                  width={2048}
+                  height={1057}
+                  className="h-auto w-full object-contain"
+                  sizes="(max-width: 768px) 100vw, 672px"
+                />
               </div>
-              <p className="text-xs text-[#7d471e]0">{t.riskDisclaimer}</p>
             </section>
+
           </section>
 
           {/* Right column – highlight card & final CTA */}
           <aside className="space-y-6 lg:sticky lg:top-10">
-            <div className="rounded-3xl border border-emerald-300 bg-white p-6 shadow-[0_0_80px_rgba(16,185,129,0.12)]">
+            <div className="rounded-3xl border border-emerald-200/80 bg-gradient-to-br from-emerald-50/40 via-white to-amber-50/30 p-6 shadow-[0_0_40px_-8px_rgba(16,185,129,0.25),0_0_20px_-10px_rgba(205,162,43,0.1)]">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#cda22b]">
                 {t.dealSnapshot}
               </p>
@@ -901,7 +816,7 @@ export default function InvestmentLanding({
                 </div>
                 <div className="flex items-center justify-between border-t border-slate-200 pt-3">
                   <span className="text-slate-600">{t.fundraisingAsk}</span>
-                  <span className="text-lg font-bold text-[#cda22b]">$320K</span>
+                  <span className="text-lg font-bold text-[#cda22b]">$150K</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-slate-600">{t.status}</span>
@@ -914,7 +829,7 @@ export default function InvestmentLanding({
                 href={PRIMARY_WHATSAPP_INTEREST}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-400/40 transition hover:bg-emerald-700"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 to-emerald-700 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-400/40 transition hover:shadow-emerald-400/50"
               >
                 {t.expressInterestWhatsApp}
               </a>
@@ -924,7 +839,7 @@ export default function InvestmentLanding({
             </div>
 
             {/* Final Call To Action */}
-            <div className="rounded-3xl border border-slate-200 bg-white/80 p-6">
+            <div className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/60 p-6 shadow-[0_0_24px_-10px_rgba(125,71,30,0.06)]">
               <h2 className="text-lg font-semibold text-[#7d471e]">
                 {t.connectWithFinjan}
               </h2>
