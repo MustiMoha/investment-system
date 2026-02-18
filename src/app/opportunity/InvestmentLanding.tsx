@@ -75,7 +75,7 @@ export default function InvestmentLanding({
         <header className="flex min-h-[33vh] justify-center border-b border-slate-200 dark:border-[var(--dark-border)] py-6 pb-8 pt-2 md:min-h-0 md:py-2 bg-gradient-to-r from-transparent via-amber-50/40 to-transparent dark:border-[var(--dark-border)] dark:via-[var(--dark-surface)]/50">
           <div className="grid w-full max-w-md grid-cols-2 place-items-center gap-6 md:max-w-none md:flex md:flex-nowrap md:items-center md:justify-center md:gap-14 lg:gap-20">
             <a href="https://finjan.vc" target="_blank" rel="noopener noreferrer" className="order-1 flex shrink-0 items-center justify-self-center md:justify-self-auto">
-              <div className="relative h-[14vh] min-h-[4.5rem] w-[14vh] min-w-[4.5rem] shrink-0 sm:h-[4.64rem] sm:min-h-0 sm:w-[4.64rem] sm:min-w-0 md:h-[7.54rem] md:w-[7.54rem] lg:h-[9.05rem] lg:w-[9.05rem]">
+              <div className="relative h-[16.1vh] min-h-[5.2rem] w-[16.1vh] min-w-[5.2rem] shrink-0 sm:h-[4.64rem] sm:min-h-0 sm:w-[4.64rem] sm:min-w-0 md:h-[7.54rem] md:w-[7.54rem] lg:h-[9.05rem] lg:w-[9.05rem]">
                 <Image
                   src="/finjan-logo.png"
                   alt="Finjan"
