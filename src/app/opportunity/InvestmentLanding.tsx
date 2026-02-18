@@ -14,7 +14,7 @@ import SetRtl from "@/components/SetRtl";
 const PRIMARY_WHATSAPP_INTEREST =
   "https://wa.me/97455518955?text=" +
   encodeURIComponent(
-    "Hello Finjan Team. I am confirming my interest in participating in this investment. Here are my details:\n\nname:\nemail:"
+    "Hello Finjan Team. I am confirming my interest in participating in this investment. Here are my details:\n\nName:\nEmail:"
   );
 
 const FINJAN_WHATSAPP = "https://wa.me/97455518955";
@@ -149,7 +149,7 @@ export default function InvestmentLanding({
               </a>
               <div className="flex flex-col text-xs text-slate-600">
                 <span>{t.directConversation}</span>
-                <span className="text-[#7d471e]0">{t.noObligation}</span>
+                <span className="text-[#7d471e]">{t.noObligation}</span>
               </div>
             </div>
 
@@ -239,7 +239,7 @@ export default function InvestmentLanding({
               </div>
             </section>
 
-            {/* ——— OVERVIEW OF MADAK ——— Clear break between Finjan's terms and Madak's details */}
+            {/* OVERVIEW OF MADAK: Clear break between Finjan's terms and Madak's details */}
             <div
               role="separator"
               aria-label={t.overviewOfMadak}
@@ -247,10 +247,10 @@ export default function InvestmentLanding({
             >
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
-                  <h2 className="text-3xl font-bold tracking-tight text-[#7d471e] sm:text-4xl">
+                  <h2 className="text-xl font-bold tracking-tight text-[#7d471e] sm:text-2xl">
                     {t.overviewOfMadak}
                   </h2>
-                  <p className="mt-3 max-w-2xl text-base font-bold leading-relaxed text-slate-800">
+                  <p className="mt-2 max-w-2xl text-sm font-medium leading-relaxed text-slate-800 sm:text-base">
                     {t.madakSectionSubtitle}
                   </p>
                 </div>
@@ -278,41 +278,41 @@ export default function InvestmentLanding({
 
             {/* Madak's Key Metrics - first section under Overview of Madak */}
             <section className="space-y-4">
-              <h3 className="text-xl font-semibold text-[#7d471e]">
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">
                 {t.madakKeyMetrics}
               </h3>
               <div className="grid grid-cols-2 gap-3 rounded-xl border border-slate-200 bg-white p-5 sm:grid-cols-3">
                 <div>
-                  <div className="text-xs text-[#7d471e]0">{t.revenue}</div>
-                  <div className="text-sm font-semibold text-[#7d471e]">
+                  <div className="text-xs text-[#7d471e]">{t.revenue}</div>
+                  <div className="text-base font-semibold text-[#7d471e]">
                     {SAUDI_RIYAL} 260K <span className="text-slate-500 font-normal">({sarToUsd(260000)})</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e]0">{t.gmv}</div>
-                  <div className="text-sm font-semibold text-[#7d471e]">
+                  <div className="text-xs text-[#7d471e]">{t.gmv}</div>
+                  <div className="text-base font-semibold text-[#7d471e]">
                     {SAUDI_RIYAL} 4M <span className="text-slate-500 font-normal">({sarToUsd(4000000)})</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e]0">{t.ltv}</div>
-                  <div className="text-sm font-semibold text-[#7d471e]">
+                  <div className="text-xs text-[#7d471e]">{t.ltv}</div>
+                  <div className="text-base font-semibold text-[#7d471e]">
                     {SAUDI_RIYAL} 7,000 <span className="text-slate-500 font-normal">({sarToUsd(7000)})</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e]0">CAC</div>
-                  <div className="text-sm font-semibold text-[#7d471e]">
+                  <div className="text-xs text-[#7d471e]">CAC</div>
+                  <div className="text-base font-semibold text-[#7d471e]">
                     {SAUDI_RIYAL} 200 <span className="text-slate-500 font-normal">({sarToUsd(200)})</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e]0">{t.grossMargin}</div>
-                  <div className="text-sm font-semibold text-[#7d471e]">10%</div>
+                  <div className="text-xs text-[#7d471e]">{t.grossMargin}</div>
+                  <div className="text-base font-semibold text-[#7d471e]">10%</div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e]0">{t.burnRate}</div>
-                  <div className="text-sm font-semibold text-[#7d471e]">
+                  <div className="text-xs text-[#7d471e]">{t.burnRate}</div>
+                  <div className="text-base font-semibold text-[#7d471e]">
                     {SAUDI_RIYAL} 100K/mo <span className="text-slate-500 font-normal">({sarToUsd(100000)}/mo)</span>
                   </div>
                 </div>
@@ -322,30 +322,30 @@ export default function InvestmentLanding({
             {/* Key Highlights - Madak platform (4 cards, balanced) */}
             <div className="grid gap-4 rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50/50 p-6 shadow-[0_0_30px_-10px_rgba(205,162,43,0.08)] sm:grid-cols-2 lg:grid-cols-4">
               <div className="flex flex-col items-center justify-center rounded-xl border border-emerald-200/80 bg-gradient-to-br from-emerald-50/60 to-white p-4 text-center shadow-[inset_0_0_20px_-10px_rgba(16,185,129,0.15)]">
-                <div className="text-2xl font-bold text-[#cda22b]">1st</div>
-                <div className="mt-1 text-xs text-slate-600">{t.licensedPlatform}</div>
-                <div className="mt-0.5 text-xs text-slate-500">{t.inSaudiArabia}</div>
+                <div className="text-2xl font-bold text-[#cda22b] sm:text-3xl">1st</div>
+                <div className="mt-1 text-sm text-slate-600">{t.licensedPlatform}</div>
+                <div className="mt-0.5 text-sm text-slate-500">{t.inSaudiArabia}</div>
               </div>
               <div className="flex flex-col items-center justify-center rounded-xl border border-amber-200/60 bg-gradient-to-br from-amber-50/40 to-white p-4 text-center">
-                <div className="text-2xl font-bold text-[#7d471e]">100%</div>
-                <div className="mt-1 text-xs text-slate-600">{t.digitalPlatform}</div>
-                <div className="mt-0.5 text-xs text-slate-500">{t.fullyAutomated}</div>
+                <div className="text-2xl font-bold text-[#7d471e] sm:text-3xl">100%</div>
+                <div className="mt-1 text-sm text-slate-600">{t.digitalPlatform}</div>
+                <div className="mt-0.5 text-sm text-slate-500">{t.fullyAutomated}</div>
               </div>
               <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 bg-white p-4 text-center">
-                <div className="text-2xl font-bold text-[#7d471e]">✓</div>
-                <div className="mt-1 text-xs text-slate-600">{t.builtInLiquidity}</div>
-                <div className="mt-0.5 text-xs text-slate-500">{t.resaleMarketplace}</div>
+                <div className="text-2xl font-bold text-[#7d471e] sm:text-3xl">✓</div>
+                <div className="mt-1 text-sm text-slate-600">{t.builtInLiquidity}</div>
+                <div className="mt-0.5 text-sm text-slate-500">{t.resaleMarketplace}</div>
               </div>
               <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 bg-white p-4 text-center">
-                <div className="text-2xl font-bold text-[#7d471e]">◎</div>
-                <div className="mt-1 text-xs text-slate-600">{t.fractionalOwnership}</div>
-                <div className="mt-0.5 text-xs text-slate-500">{t.fractionalSubtext}</div>
+                <div className="text-2xl font-bold text-[#7d471e] sm:text-3xl">◎</div>
+                <div className="mt-1 text-sm text-slate-600">{t.fractionalOwnership}</div>
+                <div className="mt-0.5 text-sm text-slate-500">{t.fractionalSubtext}</div>
               </div>
             </div>
 
             {/* Traction Metrics */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">
                 {t.madakProvenTraction}
               </h3>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -396,7 +396,7 @@ export default function InvestmentLanding({
 
             {/* Investment Performance */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">
                 {t.madakInvestmentPerformance}
               </h3>
               <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-white to-amber-50/30 p-6 shadow-[0_0_24px_-10px_rgba(205,162,43,0.06)]">
@@ -427,7 +427,7 @@ export default function InvestmentLanding({
 
             {/* Unit Economics */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">
                 {t.madakUnitEconomics}
               </h3>
               <div className="grid gap-4 md:grid-cols-2">
@@ -488,7 +488,7 @@ export default function InvestmentLanding({
 
             {/* Solution */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">{t.madakSolution}</h3>
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">{t.madakSolution}</h3>
               <div className="rounded-xl border border-emerald-200/80 bg-gradient-to-br from-emerald-50/40 to-white p-5 shadow-[0_0_24px_-10px_rgba(16,185,129,0.1)]">
                 <div className="mb-3 text-lg text-emerald-600">✓</div>
                 <div className="grid gap-5 md:grid-cols-2">
@@ -540,7 +540,7 @@ export default function InvestmentLanding({
 
             {/* Market Opportunity */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">
                 {t.madakMarketOpportunity}
               </h3>
               <div className="grid gap-4 md:grid-cols-3">
@@ -590,7 +590,7 @@ export default function InvestmentLanding({
 
             {/* Business Model */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">{t.madakBusinessModel}</h3>
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">{t.madakBusinessModel}</h3>
               <div className="grid gap-4 md:grid-cols-3">
                 <div className="rounded-xl border border-slate-200 bg-white p-5">
                   <div className="mb-2 text-lg text-[#7d471e]">◎</div>
@@ -624,7 +624,7 @@ export default function InvestmentLanding({
 
             {/* Competitive Advantage */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">
                 {t.madakCompetitiveAdvantages}
               </h3>
               <div className="grid gap-4 md:grid-cols-2">
@@ -665,7 +665,7 @@ export default function InvestmentLanding({
 
             {/* Growth Strategy */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">{t.madakGrowthStrategy}</h3>
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">{t.madakGrowthStrategy}</h3>
               <div className="rounded-xl border border-slate-200 bg-white p-5">
                 <div className="flex items-start gap-3">
                   <div className="text-base text-[#7d471e]">●</div>
@@ -686,7 +686,7 @@ export default function InvestmentLanding({
 
             {/* Investment Thesis */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">{t.investmentThesis}</h3>
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">{t.investmentThesis}</h3>
               <div className="rounded-xl border border-emerald-200 bg-white p-5">
                 <div className="mb-3 text-sm font-semibold text-[#cda22b]">
                   {t.whyInvest}
@@ -718,7 +718,7 @@ export default function InvestmentLanding({
 
             {/* Team */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">{t.madakFoundingTeam}</h3>
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">{t.madakFoundingTeam}</h3>
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-3 rounded-xl border border-slate-200 bg-white p-5">
                   <div className="flex items-center gap-3">
@@ -785,7 +785,7 @@ export default function InvestmentLanding({
 
             {/* Recognition */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e]">{t.recognition}</h3>
+              <h3 className="text-lg font-semibold text-[#7d471e] sm:text-xl">{t.recognition}</h3>
               <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-6">
                 <Image
                   src="/recognition-logos.png"
@@ -800,7 +800,7 @@ export default function InvestmentLanding({
 
           </section>
 
-          {/* Right column – highlight card & final CTA */}
+          {/* Right column: highlight card and final CTA */}
           <aside className="space-y-6 lg:sticky lg:top-10">
             <div className="rounded-3xl border border-emerald-200/80 bg-gradient-to-br from-emerald-50/40 via-white to-amber-50/30 p-6 shadow-[0_0_40px_-8px_rgba(16,185,129,0.25),0_0_20px_-10px_rgba(205,162,43,0.1)]">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#cda22b]">
@@ -834,7 +834,7 @@ export default function InvestmentLanding({
               >
                 {t.expressInterestWhatsApp}
               </a>
-              <p className="mt-3 text-[11px] leading-relaxed text-[#7d471e]0">
+              <p className="mt-3 text-[11px] leading-relaxed text-[#7d471e]">
                 {t.whatsappRedirectNote}
               </p>
             </div>
@@ -875,7 +875,7 @@ export default function InvestmentLanding({
                   </p>
                 </div>
               </div>
-              <p className="mt-4 text-[11px] text-[#7d471e]0">{t.legalDisclaimer}</p>
+              <p className="mt-4 text-[11px] text-[#7d471e]">{t.legalDisclaimer}</p>
             </div>
           </aside>
         </main>

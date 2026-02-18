@@ -134,7 +134,7 @@ export const translations = {
     contactEmail: "Email",
     overviewOfMadak: "Overview of Madak",
     visitMadak: "Visit Madak",
-    madakSectionSubtitle: "The following describes Madak — the fractional real estate platform Finjan is investing in. All numbers below are Madak's platform metrics (real estate projects), not Finjan's. Your investment terms with Finjan are shown above.",
+    madakSectionSubtitle: "The following describes Madak, the fractional real estate platform Finjan is investing in. All numbers below are Madak's platform metrics (real estate projects), not Finjan's. Your investment terms with Finjan are shown above.",
     // Growth strategy
     madakGrowthStrategy: "Madak's Growth Strategy",
     growth1: "Expand across GCC markets to capture regional real estate investment demand",
@@ -322,7 +322,7 @@ export const translations = {
     contactEmail: "البريد الإلكتروني",
     overviewOfMadak: "نظرة عامة على مداك",
     visitMadak: "زيارة مداك",
-    madakSectionSubtitle: "ما يلي يصف مداك — منصة الملكية العقارية الجزئية التي تستثمر فيها Finjan. كل الأرقام أدناه مقاييس منصة مداك (المشاريع العقارية)، وليست Finjan. شروط استثمارك مع Finjan موضحة أعلاه.",
+    madakSectionSubtitle: "ما يلي يصف مداك، منصة الملكية العقارية الجزئية التي تستثمر فيها Finjan. كل الأرقام أدناه مقاييس منصة مداك (المشاريع العقارية)، وليست Finjan. شروط استثمارك مع Finjan موضحة أعلاه.",
     // Growth strategy
     madakGrowthStrategy: "استراتيجية نمو مداك",
     growth1: "التوسع في أسواق الخليج لاستقطاب الطلب على الاستثمار العقاري الإقليمي",

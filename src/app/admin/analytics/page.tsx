@@ -131,12 +131,12 @@ export default function AnalyticsPage() {
                         <td className="px-3 py-2 text-[#7d471e]0">
                           {stats.firstClickAt
                             ? new Date(stats.firstClickAt).toLocaleDateString()
-                            : "—"}
+                            : "-"}
                         </td>
                         <td className="px-3 py-2 text-[#7d471e]0">
                           {stats.lastClickAt
                             ? new Date(stats.lastClickAt).toLocaleDateString()
-                            : "—"}
+                            : "-"}
                         </td>
                       </tr>
                     );
