@@ -10,13 +10,29 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-dark-bg: var(--dark-bg);
+  --color-dark-surface: var(--dark-surface);
+  --color-dark-surface-alt: var(--dark-surface-alt);
+  --color-dark-border: var(--dark-border);
+  --color-dark-text: var(--dark-text);
+  --color-dark-text-muted: var(--dark-text-muted);
+  --color-dark-accent: var(--dark-accent);
+  --color-dark-accent-hover: var(--dark-accent-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 .dark {
-  --background: #000000;
-  --foreground: #d4b896;
+  --background: #0f0e0d;
+  --foreground: #f5f1eb;
+  --dark-bg: #0f0e0d;
+  --dark-surface: #1a1816;
+  --dark-surface-alt: #24201d;
+  --dark-border: #2d2824;
+  --dark-text: #f5f1eb;
+  --dark-text-muted: #a89f8f;
+  --dark-accent: #e5a732;
+  --dark-accent-hover: #f0b844;
 }
 
 body {

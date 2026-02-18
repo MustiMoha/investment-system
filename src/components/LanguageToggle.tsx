@@ -26,7 +26,7 @@ export default function LanguageToggle({
   return (
     <Link
       href={href}
-      className="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-[#7d471e] transition hover:border-[#cda22b] hover:text-[#cda22b] dark:border-zinc-600 dark:bg-zinc-700 dark:text-[#c9a86c] dark:hover:border-[#cda22b] dark:hover:text-[#cda22b]"
+      className="rounded-full border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-[#7d471e] transition hover:border-[#cda22b] hover:text-[#cda22b] dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface)] dark:text-[var(--dark-text)] dark:hover:border-[var(--dark-accent)] dark:hover:text-[var(--dark-accent)]"
       aria-label={currentLang === "en" ? "Switch to Arabic" : "Switch to English"}
     >
       {label}

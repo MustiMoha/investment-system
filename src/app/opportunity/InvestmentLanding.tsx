@@ -52,7 +52,7 @@ export default function InvestmentLanding({
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-b from-amber-50/30 via-white to-emerald-50/20 text-[#7d471e] dark:from-black dark:via-zinc-950 dark:to-black dark:text-[#d4b896]"
+      className="min-h-screen bg-gradient-to-b from-amber-50/30 via-white to-emerald-50/20 text-[#7d471e] dark:from-[var(--dark-bg)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-bg)] dark:text-[var(--dark-text)]"
       dir={isRtl ? "rtl" : "ltr"}
       lang={liveLang}
     >
@@ -62,7 +62,7 @@ export default function InvestmentLanding({
         <div className="absolute top-4 right-4 flex items-center gap-3 md:right-8 lg:right-12">
           <ThemeToggle />
           {liveRefCode && (
-            <span className="rounded-full border border-emerald-300 bg-white dark:bg-zinc-700 px-3 py-1 text-xs text-[#cda22b] dark:border-emerald-600 dark:bg-zinc-700 dark:text-[#cda22b]">
+            <span className="rounded-full border border-emerald-300 bg-white dark:bg-[var(--dark-surface)] px-3 py-1 text-xs text-[#cda22b] dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface)] dark:text-[var(--dark-accent)]">
               {t.personalizedLink} {liveRefCode}
             </span>
           )}
@@ -70,17 +70,17 @@ export default function InvestmentLanding({
         </div>
 
         {/* Center-aligned logos */}
-        <header className="flex justify-center border-b border-slate-200 dark:border-zinc-500 pb-8 pt-2 bg-gradient-to-r from-transparent via-amber-50/40 to-transparent dark:border-zinc-500 dark:via-zinc-700/50">
+        <header className="flex justify-center border-b border-slate-200 dark:border-[var(--dark-border)] pb-8 pt-2 bg-gradient-to-r from-transparent via-amber-50/40 to-transparent dark:border-[var(--dark-border)] dark:via-[var(--dark-surface)]/50">
           <div className="grid grid-cols-2 place-items-center md:flex md:flex-nowrap md:items-center md:justify-center gap-4 sm:gap-8 md:gap-14 lg:gap-20">
             <a href="https://finjan.vc" target="_blank" rel="noopener noreferrer" className="order-1 flex shrink-0 items-center justify-self-center md:justify-self-auto">
-              <div className="relative h-12 w-12 shrink-0 sm:h-16 sm:w-16 md:h-[6.5rem] md:w-[6.5rem] lg:h-[7.8rem] lg:w-[7.8rem]">
+              <div className="relative h-[3.48rem] w-[3.48rem] shrink-0 sm:h-[4.64rem] sm:w-[4.64rem] md:h-[7.54rem] md:w-[7.54rem] lg:h-[9.05rem] lg:w-[9.05rem]">
                 <Image
                   src="/finjan-logo.png"
                   alt="Finjan"
                   fill
                   className="object-contain"
                   priority
-                  sizes="125px"
+                  sizes="145px"
                 />
               </div>
             </a>
@@ -112,16 +112,16 @@ export default function InvestmentLanding({
         <main className="mt-10 grid flex-1 gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start">
           <section className="space-y-10">
             <div className="flex flex-wrap items-center gap-2">
-              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 dark:border-emerald-700 bg-gradient-to-r from-emerald-50 to-amber-50/60 px-3 py-1 text-xs font-medium text-[#cda22b] shadow-[0_0_12px_rgba(16,185,129,0.2)] dark:border-emerald-700/50 dark:from-emerald-900/30 dark:to-amber-900/30 dark:text-[#cda22b]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 dark:border-[var(--dark-border)] bg-gradient-to-r from-emerald-50 to-amber-50/60 px-3 py-1 text-xs font-medium text-[#cda22b] shadow-[0_0_12px_rgba(16,185,129,0.2)] dark:from-[var(--dark-surface-alt)] dark:to-[var(--dark-surface-alt)] dark:text-[var(--dark-accent)]">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_6px_rgba(16,185,129,0.6)]" />
                 {t.liveBadge}
               </div>
-              <span className="rounded-full border border-slate-300 dark:border-zinc-500 bg-white dark:bg-zinc-700 px-3 py-1 text-xs font-medium text-[#7d471e] dark:text-[#c9a86c]">
+              <span className="rounded-full border border-slate-300 dark:border-[var(--dark-border)] bg-white dark:bg-[var(--dark-surface)] px-3 py-1 text-xs font-medium text-[#7d471e] dark:text-[var(--dark-text)]">
                 {t.professionalOnly}
               </span>
             </div>
             <div className="space-y-4">
-              <h1 className="text-balance text-4xl font-semibold tracking-tight text-[#7d471e] dark:text-[#d4b896] sm:text-5xl lg:text-6xl">
+              <h1 className="text-balance text-4xl font-semibold tracking-tight text-[#7d471e] dark:text-[var(--dark-text)] sm:text-5xl lg:text-6xl">
                 {t.heroTitle1}{" "}
                 <a
                   href={madakUrl}
@@ -136,7 +136,7 @@ export default function InvestmentLanding({
                   {t.heroTitle4}
                 </span>
               </h1>
-              <p className="max-w-xl text-pretty text-base text-[#7d471e] dark:text-[#c9a86c]/90 sm:text-lg">
+              <p className="max-w-xl text-pretty text-base text-[#7d471e] dark:text-[var(--dark-text-muted)] sm:text-lg">
                 {t.heroDesc}
               </p>
             </div>
@@ -149,45 +149,45 @@ export default function InvestmentLanding({
               >
                 {t.expressInterest}
               </a>
-              <div className="flex flex-col text-xs text-slate-600 dark:text-slate-400 dark:text-slate-400">
+              <div className="flex flex-col text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                 <span>{t.directConversation}</span>
-                <span className="text-[#7d471e] dark:text-[#c9a86c]">{t.noObligation}</span>
+                <span className="text-[#7d471e] dark:text-[var(--dark-text)]">{t.noObligation}</span>
               </div>
             </div>
 
             {/* Ticket & Pricing - Finjan's investment terms (QAR) */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+              <h2 className="text-2xl font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                 {t.ticketPricingTitle}
               </h2>
-              <p className="text-lg font-medium text-[#7d471e] dark:text-[#c9a86c]">{t.ticketCount}</p>
-              <p className="text-sm text-slate-600 dark:text-slate-400 dark:text-slate-400">
+              <p className="text-lg font-medium text-[#7d471e] dark:text-[var(--dark-text)]">{t.ticketCount}</p>
+              <p className="text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">
                 {t.ticketsPurchased}, {t.ticketsRemaining}.
               </p>
-              <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-500 bg-gradient-to-br from-white to-slate-50/50 shadow-[0_0_20px_-8px_rgba(125,71,30,0.08)] dark:border-zinc-500 dark:from-zinc-700 dark:to-zinc-700/80 dark:shadow-none">
-                <div className="grid gap-4 border-slate-200 dark:border-zinc-500 p-5 sm:grid-cols-3">
-                  <div className="flex flex-col rounded-lg bg-slate-50 dark:bg-zinc-700/50 p-4">
-                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-slate-400">{t.ticketLabel}</span>
-                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e] dark:text-[#c9a86c]">
+              <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-gradient-to-br from-white to-slate-50/50 shadow-[0_0_20px_-8px_rgba(125,71,30,0.08)] dark:border-[var(--dark-border)] dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] dark:shadow-none">
+                <div className="grid gap-4 border-slate-200 dark:border-[var(--dark-border)] p-5 sm:grid-cols-3">
+                  <div className="flex flex-col rounded-lg bg-slate-50 dark:bg-[var(--dark-surface-alt)] p-4">
+                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-[var(--dark-text-muted)]">{t.ticketLabel}</span>
+                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e] dark:text-[var(--dark-text)]">
                       {QATARI_RIYAL} 25,000
                     </span>
                   </div>
-                  <div className="flex flex-col rounded-lg bg-slate-50 dark:bg-zinc-700/50 p-4">
-                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-slate-400">{t.netInvestLabel}</span>
-                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e] dark:text-[#c9a86c]">
+                  <div className="flex flex-col rounded-lg bg-slate-50 dark:bg-[var(--dark-surface-alt)] p-4">
+                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-[var(--dark-text-muted)]">{t.netInvestLabel}</span>
+                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e] dark:text-[var(--dark-text)]">
                       {QATARI_RIYAL} 21,900
                     </span>
                   </div>
-                  <div className="flex flex-col rounded-lg bg-slate-50 dark:bg-zinc-700/50 p-4">
-                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-slate-400">{t.spvLabel}</span>
-                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e] dark:text-[#c9a86c]">
+                  <div className="flex flex-col rounded-lg bg-slate-50 dark:bg-[var(--dark-surface-alt)] p-4">
+                    <span className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-[var(--dark-text-muted)]">{t.spvLabel}</span>
+                    <span className="mt-2 text-xl font-semibold tabular-nums text-[#7d471e] dark:text-[var(--dark-text)]">
                       {QATARI_RIYAL} 3,100
                     </span>
                   </div>
                 </div>
               </div>
-              <div className="mt-5 rounded-xl border-2 border-amber-200/80 dark:border-amber-700/60 bg-gradient-to-br from-amber-50/70 via-white to-emerald-50/50 p-5 shadow-[0_0_28px_-8px_rgba(205,162,43,0.2),inset_0_0_0_1px_rgba(205,162,43,0.08)] dark:from-zinc-700/80 dark:via-zinc-700 dark:to-zinc-700/80">
-                <p className="text-base font-medium text-[#7d471e] dark:text-[#c9a86c]">{t.membershipNote}</p>
+              <div className="mt-5 rounded-xl border-2 border-amber-200/80 dark:border-[var(--dark-border)] bg-gradient-to-br from-amber-50/70 via-white to-emerald-50/50 p-5 shadow-[0_0_28px_-8px_rgba(205,162,43,0.2),inset_0_0_0_1px_rgba(205,162,43,0.08)] dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)]">
+                <p className="text-base font-medium text-[#7d471e] dark:text-[var(--dark-text)]">{t.membershipNote}</p>
                 <div className="mt-4 flex flex-wrap gap-3">
                   <a
                     href={FINJAN_WHATSAPP}
@@ -199,7 +199,7 @@ export default function InvestmentLanding({
                   </a>
                   <a
                     href="mailto:info@finjan.vc"
-                    className="inline-flex items-center gap-2 rounded-full border-2 border-amber-300/80 bg-white dark:bg-zinc-700 px-6 py-2.5 text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c] shadow-sm transition hover:border-[#cda22b] hover:bg-amber-50/50"
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-amber-300/80 bg-white dark:bg-[var(--dark-surface)] px-6 py-2.5 text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)] shadow-sm transition hover:border-[#cda22b] hover:bg-amber-50/50"
                   >
                     {t.contactEmail}
                   </a>
@@ -209,27 +209,27 @@ export default function InvestmentLanding({
 
             {/* Round Overview - Finjan's round (no Madak metrics here) */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+              <h2 className="text-2xl font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                 {t.roundOverview}
               </h2>
-              <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-6">
-                <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
+              <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-6">
+                <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-[var(--dark-text-muted)]">
                   {t.currentRound}
                 </div>
                 <div className="mt-3 space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600 dark:text-slate-400">{t.preValuation}</span>
-                    <span className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                    <span className="text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">{t.preValuation}</span>
+                    <span className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                       $10M
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-600 dark:text-slate-400">{t.postValuation}</span>
-                    <span className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                    <span className="text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">{t.postValuation}</span>
+                    <span className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                       $10.32M
                     </span>
                   </div>
-                  <div className="flex items-center justify-between border-t border-slate-200 dark:border-zinc-500 pt-2">
+                  <div className="flex items-center justify-between border-t border-slate-200 dark:border-[var(--dark-border)] pt-2">
                     <span className="text-sm font-medium text-[#cda22b]">
                       {t.fundraisingAsk}
                     </span>
@@ -245,14 +245,14 @@ export default function InvestmentLanding({
             <div
               role="separator"
               aria-label={t.overviewOfMadak}
-              className="border-t-2 border-b-2 border-slate-300 dark:border-zinc-500 bg-gradient-to-r from-slate-100 via-amber-50/50 to-slate-100 px-6 py-8 dark:from-zinc-700 dark:via-zinc-600/80 dark:to-zinc-700"
+              className="border-t-2 border-b-2 border-slate-300 dark:border-[var(--dark-border)] bg-gradient-to-r from-slate-100 via-amber-50/50 to-slate-100 px-6 py-8 dark:from-[var(--dark-surface)] dark:via-[var(--dark-surface-alt)] dark:to-[var(--dark-surface)]"
             >
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
-                  <h2 className="text-xl font-bold tracking-tight text-[#7d471e] dark:text-[#c9a86c] sm:text-2xl">
+                  <h2 className="text-xl font-bold tracking-tight text-[#7d471e] dark:text-[var(--dark-text)] sm:text-2xl">
                     {t.overviewOfMadak}
                   </h2>
-                  <p className="mt-2 max-w-2xl text-sm font-medium leading-relaxed text-slate-800 dark:text-slate-300 sm:text-base">
+                  <p className="mt-2 max-w-2xl text-sm font-medium leading-relaxed text-slate-800 dark:text-[var(--dark-text-muted)] sm:text-base">
                     {t.madakSectionSubtitle}
                   </p>
                 </div>
@@ -261,14 +261,14 @@ export default function InvestmentLanding({
                     href={madakUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex min-h-[52px] w-full items-center justify-center rounded-xl border border-amber-200/80 dark:border-amber-700/60 bg-gradient-to-r from-white to-amber-50/40 text-sm font-medium text-[#7d471e] shadow-[0_0_16px_-6px_rgba(205,162,43,0.15)] transition hover:border-[#cda22b]/60 hover:shadow-[0_0_24px_-8px_rgba(205,162,43,0.25)] dark:text-[#c9a86c] dark:from-zinc-700 dark:to-zinc-700/80"
+                    className="flex min-h-[52px] w-full items-center justify-center rounded-xl border border-amber-200/80 dark:border-[var(--dark-border)] bg-gradient-to-r from-white to-amber-50/40 text-sm font-medium text-[#7d471e] shadow-[0_0_16px_-6px_rgba(205,162,43,0.15)] transition hover:border-[#cda22b]/60 hover:shadow-[0_0_24px_-8px_rgba(205,162,43,0.25)] dark:text-[var(--dark-text)] dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)]"
                   >
                     {t.visitMadak}
                   </a>
                   <a
                     href="/Madak-Pitch-Dec25.pdf"
                     download
-                    className="flex min-h-[52px] w-full items-center justify-center rounded-xl border border-amber-200/80 dark:border-amber-700/60 bg-gradient-to-r from-white to-amber-50/40 text-sm font-medium text-[#7d471e] shadow-[0_0_16px_-6px_rgba(205,162,43,0.15)] transition hover:border-[#cda22b]/60 dark:text-[#c9a86c] dark:from-zinc-700 dark:to-zinc-700/80"
+                    className="flex min-h-[52px] w-full items-center justify-center rounded-xl border border-amber-200/80 dark:border-[var(--dark-border)] bg-gradient-to-r from-white to-amber-50/40 text-sm font-medium text-[#7d471e] shadow-[0_0_16px_-6px_rgba(205,162,43,0.15)] transition hover:border-[#cda22b]/60 dark:text-[var(--dark-text)] dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)]"
                   >
                     {t.viewThePitch}
                   </a>
@@ -278,116 +278,116 @@ export default function InvestmentLanding({
 
             {/* Madak's Key Metrics - first section under Overview of Madak */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">
                 {t.madakKeyMetrics}
               </h3>
-              <div className="grid grid-cols-2 gap-3 rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5 sm:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3 rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5 sm:grid-cols-3">
                 <div>
-                  <div className="text-xs text-[#7d471e] dark:text-[#c9a86c]">{t.revenue}</div>
-                  <div className="text-base font-semibold text-[#7d471e] dark:text-[#c9a86c]">
-                    {SAUDI_RIYAL} 260K <span className="text-slate-500 dark:text-slate-500 font-normal">({sarToUsd(260000)})</span>
+                  <div className="text-xs text-[#7d471e] dark:text-[var(--dark-text)]">{t.revenue}</div>
+                  <div className="text-base font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
+                    {SAUDI_RIYAL} 260K <span className="text-slate-500 dark:text-[var(--dark-text-muted)] font-normal">({sarToUsd(260000)})</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e] dark:text-[#c9a86c]">{t.totalGmv}</div>
-                  <div className="text-base font-semibold text-[#7d471e] dark:text-[#c9a86c]">
-                    {SAUDI_RIYAL} 4M <span className="text-slate-500 dark:text-slate-500 font-normal">({sarToUsd(4000000)})</span>
+                  <div className="text-xs text-[#7d471e] dark:text-[var(--dark-text)]">{t.totalGmv}</div>
+                  <div className="text-base font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
+                    {SAUDI_RIYAL} 4M <span className="text-slate-500 dark:text-[var(--dark-text-muted)] font-normal">({sarToUsd(4000000)})</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e] dark:text-[#c9a86c]">{t.ltv}</div>
-                  <div className="text-base font-semibold text-[#7d471e] dark:text-[#c9a86c]">
-                    {SAUDI_RIYAL} 7,000 <span className="text-slate-500 dark:text-slate-500 font-normal">({sarToUsd(7000)})</span>
+                  <div className="text-xs text-[#7d471e] dark:text-[var(--dark-text)]">{t.ltv}</div>
+                  <div className="text-base font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
+                    {SAUDI_RIYAL} 7,000 <span className="text-slate-500 dark:text-[var(--dark-text-muted)] font-normal">({sarToUsd(7000)})</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e] dark:text-[#c9a86c]">CAC</div>
-                  <div className="text-base font-semibold text-[#7d471e] dark:text-[#c9a86c]">
-                    {SAUDI_RIYAL} 200 <span className="text-slate-500 dark:text-slate-500 font-normal">({sarToUsd(200)})</span>
+                  <div className="text-xs text-[#7d471e] dark:text-[var(--dark-text)]">CAC</div>
+                  <div className="text-base font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
+                    {SAUDI_RIYAL} 200 <span className="text-slate-500 dark:text-[var(--dark-text-muted)] font-normal">({sarToUsd(200)})</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e] dark:text-[#c9a86c]">{t.grossMargin}</div>
-                  <div className="text-base font-semibold text-[#7d471e] dark:text-[#c9a86c]">10%</div>
+                  <div className="text-xs text-[#7d471e] dark:text-[var(--dark-text)]">{t.grossMargin}</div>
+                  <div className="text-base font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">10%</div>
                 </div>
                 <div>
-                  <div className="text-xs text-[#7d471e] dark:text-[#c9a86c]">{t.burnRate}</div>
-                  <div className="text-base font-semibold text-[#7d471e] dark:text-[#c9a86c]">
-                    {SAUDI_RIYAL} 100K/mo <span className="text-slate-500 dark:text-slate-500 font-normal">({sarToUsd(100000)}/mo)</span>
+                  <div className="text-xs text-[#7d471e] dark:text-[var(--dark-text)]">{t.burnRate}</div>
+                  <div className="text-base font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
+                    {SAUDI_RIYAL} 100K/mo <span className="text-slate-500 dark:text-[var(--dark-text-muted)] font-normal">({sarToUsd(100000)}/mo)</span>
                   </div>
                 </div>
               </div>
             </section>
 
             {/* Key Highlights - Madak platform (4 cards, balanced) */}
-            <div className="grid gap-4 rounded-2xl border border-slate-200 dark:border-zinc-500 bg-gradient-to-br from-white to-slate-50/50 p-6 shadow-[0_0_30px_-10px_rgba(205,162,43,0.08)] dark:from-zinc-700 dark:to-zinc-700/80 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="flex flex-col items-center justify-center rounded-xl border border-emerald-200 dark:border-emerald-700 bg-gradient-to-br from-emerald-50/60 to-white p-4 text-center shadow-[inset_0_0_20px_-10px_rgba(16,185,129,0.15)] dark:from-emerald-900/30 dark:to-zinc-700">
+            <div className="grid gap-4 rounded-2xl border border-slate-200 dark:border-[var(--dark-border)] bg-gradient-to-br from-white to-slate-50/50 p-6 shadow-[0_0_30px_-10px_rgba(205,162,43,0.08)] dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] sm:grid-cols-2 lg:grid-cols-4">
+              <div className="flex flex-col items-center justify-center rounded-xl border border-emerald-200 dark:border-emerald-700 bg-gradient-to-br from-emerald-50/60 to-white p-4 text-center shadow-[inset_0_0_20px_-10px_rgba(16,185,129,0.15)] dark:from-[var(--dark-surface-alt)] dark:to-[var(--dark-surface)]">
                 <div className="text-2xl font-bold text-[#cda22b] sm:text-3xl">1st</div>
-                <div className="mt-1 text-sm text-slate-600 dark:text-slate-400">{t.licensedPlatform}</div>
-                <div className="mt-0.5 text-sm text-slate-500 dark:text-slate-500">{t.inSaudiArabia}</div>
+                <div className="mt-1 text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">{t.licensedPlatform}</div>
+                <div className="mt-0.5 text-sm text-slate-500 dark:text-[var(--dark-text-muted)]">{t.inSaudiArabia}</div>
               </div>
-              <div className="flex flex-col items-center justify-center rounded-xl border border-amber-200/60 dark:border-amber-700/60 bg-gradient-to-br from-amber-50/40 to-white p-4 text-center dark:from-amber-900/20 dark:to-zinc-700">
-                <div className="text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c] sm:text-3xl">100%</div>
-                <div className="mt-1 text-sm text-slate-600 dark:text-slate-400">{t.digitalPlatform}</div>
-                <div className="mt-0.5 text-sm text-slate-500 dark:text-slate-500">{t.fullyAutomated}</div>
+              <div className="flex flex-col items-center justify-center rounded-xl border border-amber-200/60 dark:border-[var(--dark-border)] bg-gradient-to-br from-amber-50/40 to-white p-4 text-center dark:from-[var(--dark-surface-alt)] dark:to-[var(--dark-surface)]">
+                <div className="text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-3xl">100%</div>
+                <div className="mt-1 text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">{t.digitalPlatform}</div>
+                <div className="mt-0.5 text-sm text-slate-500 dark:text-[var(--dark-text-muted)]">{t.fullyAutomated}</div>
               </div>
-              <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-4 text-center">
-                <div className="text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c] sm:text-3xl">✓</div>
-                <div className="mt-1 text-sm text-slate-600 dark:text-slate-400">{t.builtInLiquidity}</div>
-                <div className="mt-0.5 text-sm text-slate-500 dark:text-slate-500">{t.resaleMarketplace}</div>
+              <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-4 text-center">
+                <div className="text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-3xl">✓</div>
+                <div className="mt-1 text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">{t.builtInLiquidity}</div>
+                <div className="mt-0.5 text-sm text-slate-500 dark:text-[var(--dark-text-muted)]">{t.resaleMarketplace}</div>
               </div>
-              <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-4 text-center">
-                <div className="text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c] sm:text-3xl">◎</div>
-                <div className="mt-1 text-sm text-slate-600 dark:text-slate-400">{t.fractionalOwnership}</div>
-                <div className="mt-0.5 text-sm text-slate-500 dark:text-slate-500">{t.fractionalSubtext}</div>
+              <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-4 text-center">
+                <div className="text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-3xl">◎</div>
+                <div className="mt-1 text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">{t.fractionalOwnership}</div>
+                <div className="mt-0.5 text-sm text-slate-500 dark:text-[var(--dark-text-muted)]">{t.fractionalSubtext}</div>
               </div>
             </div>
 
             {/* Traction Metrics */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">
                 {t.madakProvenTraction}
               </h3>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                <div className="relative overflow-hidden rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-zinc-700 p-5">
+                <div className="relative overflow-hidden rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                   <div className="text-xs uppercase tracking-[0.15em] text-[#cda22b]">
                     {t.platformUsers}
                   </div>
                   <div className="mt-2 text-2xl font-bold text-[#cda22b]">
                     13,000+
                   </div>
-                  <div className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-1 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.growingUserBase}
                   </div>
                   <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-emerald-300/40 blur-2xl" />
                   <div className="absolute -bottom-2 -left-2 h-16 w-16 rounded-full bg-amber-200/30 blur-xl" />
                 </div>
-                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-slate-400">
+                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.activeInvestors}
                   </div>
-                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c]">700+</div>
-                  <div className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)]">700+</div>
+                  <div className="mt-1 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.engagedInvestors}
                   </div>
                 </div>
-                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-slate-400">
+                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-[var(--dark-text-muted)]">
                     <strong>{t.earlyTractionGmvBold}</strong> {t.earlyTractionGmvRest}
                   </div>
-                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c]">
-                    {SAUDI_RIYAL} 2.6M <span className="text-sm font-normal text-slate-500 dark:text-slate-500">({sarToUsd(2600000)})</span>
+                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)]">
+                    {SAUDI_RIYAL} 2.6M <span className="text-sm font-normal text-slate-500 dark:text-[var(--dark-text-muted)]">({sarToUsd(2600000)})</span>
                   </div>
-                  <div className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-1 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.grossMerchandiseValue}
                   </div>
                 </div>
-                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-slate-400">
+                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.retentionRate}
                   </div>
-                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c]">60%</div>
-                  <div className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)]">60%</div>
+                  <div className="mt-1 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.strongRetention}
                   </div>
                 </div>
@@ -396,28 +396,28 @@ export default function InvestmentLanding({
 
             {/* Investment Performance */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">
                 {t.madakInvestmentPerformance}
               </h3>
-              <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-gradient-to-br from-white to-amber-50/30 p-6 shadow-[0_0_24px_-10px_rgba(205,162,43,0.06)] dark:from-zinc-700 dark:to-zinc-700/80">
+              <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-gradient-to-br from-white to-amber-50/30 p-6 shadow-[0_0_24px_-10px_rgba(205,162,43,0.06)] dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)]">
                 <div className="grid gap-6 md:grid-cols-3">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-[#cda22b]">
-                      {SAUDI_RIYAL} 3.18M <span className="text-sm font-normal text-slate-500 dark:text-slate-500">({sarToUsd(3180000)})</span>
+                      {SAUDI_RIYAL} 3.18M <span className="text-sm font-normal text-slate-500 dark:text-[var(--dark-text-muted)]">({sarToUsd(3180000)})</span>
                     </div>
-                    <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">
+                    <div className="mt-2 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                       {t.raisedAcross}
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-[#cda22b]">10%</div>
-                    <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">
+                    <div className="mt-2 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                       {t.returnsDelivered}
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-[#cda22b]">1,070+</div>
-                    <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">
+                    <div className="mt-2 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                       {t.investorsParticipated}
                     </div>
                   </div>
@@ -427,18 +427,18 @@ export default function InvestmentLanding({
 
             {/* Unit Economics */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">
                 {t.madakUnitEconomics}
               </h3>
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-zinc-700 p-5">
+                <div className="rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-slate-400">
+                      <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-[var(--dark-text-muted)]">
                         CAC
                       </div>
                       <div className="mt-1 text-2xl font-bold text-[#cda22b]">
-                        {SAUDI_RIYAL} 200 <span className="text-sm font-normal text-slate-500 dark:text-slate-500">({sarToUsd(200)})</span>
+                        {SAUDI_RIYAL} 200 <span className="text-sm font-normal text-slate-500 dark:text-[var(--dark-text-muted)]">({sarToUsd(200)})</span>
                       </div>
                     </div>
                     <div className="text-lg text-[#cda22b]">▥</div>
@@ -449,19 +449,19 @@ export default function InvestmentLanding({
                       style={{ width: "45%" }}
                     />
                   </div>
-                  <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-2 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.lowCac}
                   </div>
                 </div>
-                <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
+                <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-slate-400">
+                      <div className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-[var(--dark-text-muted)]">
                         {t.marketingEfficiency}
                       </div>
-                      <div className="mt-1 text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c]">17x</div>
+                      <div className="mt-1 text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)]">35x</div>
                     </div>
-                    <div className="text-lg text-[#7d471e] dark:text-[#c9a86c]">↑</div>
+                    <div className="text-lg text-[#7d471e] dark:text-[var(--dark-text)]">↑</div>
                   </div>
                   <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-200">
                     <div
@@ -469,7 +469,7 @@ export default function InvestmentLanding({
                       style={{ width: "100%" }}
                     />
                   </div>
-                  <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-2 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.sarRaisedPerSpent}
                   </div>
                 </div>
@@ -478,25 +478,25 @@ export default function InvestmentLanding({
 
             {/* Problem & Solution */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                 {t.problemMadakSolves}
               </h3>
-              <p className="text-sm leading-relaxed text-[#7d471e] dark:text-[#c9a86c]">
+              <p className="text-sm leading-relaxed text-[#7d471e] dark:text-[var(--dark-text)]">
                 {t.problemSummary}
               </p>
             </section>
 
             {/* Solution */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">{t.madakSolution}</h3>
-              <div className="rounded-xl border border-emerald-200 dark:border-emerald-700 bg-gradient-to-br from-emerald-50/40 to-white p-5 shadow-[0_0_24px_-10px_rgba(16,185,129,0.1)] dark:from-emerald-900/20 dark:to-zinc-700">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.madakSolution}</h3>
+              <div className="rounded-xl border border-emerald-200 dark:border-[var(--dark-border)] bg-gradient-to-br from-emerald-50/40 to-white p-5 shadow-[0_0_24px_-10px_rgba(16,185,129,0.1)] dark:from-[var(--dark-surface-alt)] dark:to-[var(--dark-surface)]">
                 <div className="mb-3 text-lg text-emerald-600">✓</div>
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>
                     <p className="text-sm font-semibold text-[#cda22b]">
                       {t.forInvestors}
                     </p>
-                    <ul className="mt-2 space-y-1.5 text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                    <ul className="mt-2 space-y-1.5 text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                       <li className="flex items-start gap-2">
                         <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionInvestors1}</span>
@@ -519,7 +519,7 @@ export default function InvestmentLanding({
                     <p className="text-sm font-semibold text-[#cda22b]">
                       {t.forDevelopers}
                     </p>
-                    <ul className="mt-2 space-y-1.5 text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                    <ul className="mt-2 space-y-1.5 text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                       <li className="flex items-start gap-2">
                         <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionDevs1}</span>
@@ -540,49 +540,49 @@ export default function InvestmentLanding({
 
             {/* Market Opportunity */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">
                 {t.madakMarketOpportunity}
               </h3>
               <div className="grid gap-4 md:grid-cols-3">
-                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
+                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.globalMarket}
                   </div>
-                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c]">
-                    {SAUDI_RIYAL} 37T <span className="text-slate-500 dark:text-slate-500 font-normal">({sarToUsd(37_000_000_000_000)})</span>
+                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)]">
+                    {SAUDI_RIYAL} 37T <span className="text-slate-500 dark:text-[var(--dark-text-muted)] font-normal">({sarToUsd(37_000_000_000_000)})</span>
                   </div>
-                  <div className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-1 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.annualTransactionVolume}
                   </div>
                   <div className="absolute -right-2 -top-2 h-16 w-16 rounded-full bg-slate-800/50 blur-xl" />
                 </div>
-                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400">
+                <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.gccMarket}
                   </div>
-                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[#c9a86c]">
-                    {SAUDI_RIYAL} 1.3T <span className="text-slate-500 dark:text-slate-500 font-normal">({sarToUsd(1_300_000_000_000)})</span>
+                  <div className="mt-2 text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)]">
+                    {SAUDI_RIYAL} 1.3T <span className="text-slate-500 dark:text-[var(--dark-text-muted)] font-normal">({sarToUsd(1_300_000_000_000)})</span>
                   </div>
-                  <div className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-1 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.realEstateMarketSize}
                   </div>
                   <div className="absolute -right-2 -top-2 h-16 w-16 rounded-full bg-slate-800/50 blur-xl" />
                 </div>
-                <div className="relative overflow-hidden rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-zinc-700 p-5">
+                <div className="relative overflow-hidden rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                   <div className="text-xs uppercase tracking-[0.2em] text-[#cda22b]">
                     {t.saudiMarket}
                   </div>
                   <div className="mt-2 text-2xl font-bold text-[#cda22b]">
-                    {SAUDI_RIYAL} 400B <span className="text-slate-500 dark:text-slate-500 font-normal">({sarToUsd(400_000_000_000)})</span>
+                    {SAUDI_RIYAL} 400B <span className="text-slate-500 dark:text-[var(--dark-text-muted)] font-normal">({sarToUsd(400_000_000_000)})</span>
                   </div>
                   <div className="mt-1 text-xs text-[#cda22b]/70">
                     {t.annualTransactions}
                   </div>
-                  <div className="absolute -right-2 -top-2 h-16 w-16 rounded-full bg-white dark:bg-zinc-700 blur-xl" />
+                  <div className="absolute -right-2 -top-2 h-16 w-16 rounded-full bg-white dark:bg-[var(--dark-surface)] blur-xl" />
                 </div>
               </div>
-              <div className="mt-4 rounded-lg border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-4">
-                <div className="text-xs text-slate-600 dark:text-slate-400">
+              <div className="mt-4 rounded-lg border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-4">
+                <div className="text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                   {t.marketTrends}
                 </div>
               </div>
@@ -590,32 +590,32 @@ export default function InvestmentLanding({
 
             {/* Business Model */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">{t.madakBusinessModel}</h3>
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.madakBusinessModel}</h3>
               <div className="grid gap-4 md:grid-cols-3">
-                <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[#c9a86c]">◎</div>
-                  <div className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[var(--dark-text)]">◎</div>
+                  <div className="text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.transactionCommissions}
                   </div>
-                  <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-2 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.revenueFromTransactions}
                   </div>
                 </div>
-                <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[#c9a86c]">▫</div>
-                  <div className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[var(--dark-text)]">▫</div>
+                  <div className="text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.platformSubscriptions}
                   </div>
-                  <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-2 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.recurringRevenue}
                   </div>
                 </div>
-                <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[#c9a86c]">▥</div>
-                  <div className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[var(--dark-text)]">▥</div>
+                  <div className="text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.ownershipShareFees}
                   </div>
-                  <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="mt-2 text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">
                     {t.feesFromManagement}
                   </div>
                 </div>
@@ -624,39 +624,39 @@ export default function InvestmentLanding({
 
             {/* Competitive Advantage */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">
                 {t.madakCompetitiveAdvantages}
               </h3>
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-zinc-700 p-5">
+                <div className="rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                   <div className="mb-1.5 text-sm font-semibold text-[#cda22b]">
                     {t.regulatoryAdvantage}
                   </div>
-                  <div className="text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                  <div className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.regulatoryAdvantageDesc}
                   </div>
                 </div>
-                <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="mb-1.5 text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="mb-1.5 text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.liquidityAdvantage}
                   </div>
-                  <div className="text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                  <div className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.liquidityAdvantageDesc}
                   </div>
                 </div>
-                <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="mb-1.5 text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="mb-1.5 text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.technologyAdvantage}
                   </div>
-                  <div className="text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                  <div className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.technologyAdvantageDesc}
                   </div>
                 </div>
-                <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
-                  <div className="mb-1.5 text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
+                  <div className="mb-1.5 text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.marketAdvantage}
                   </div>
-                  <div className="text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                  <div className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.marketAdvantageDesc}
                   </div>
                 </div>
@@ -665,18 +665,18 @@ export default function InvestmentLanding({
 
             {/* Growth Strategy */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">{t.madakGrowthStrategy}</h3>
-              <div className="rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.madakGrowthStrategy}</h3>
+              <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                 <div className="flex items-start gap-3">
-                  <div className="text-base text-[#7d471e] dark:text-[#c9a86c]">●</div>
+                  <div className="text-base text-[#7d471e] dark:text-[var(--dark-text)]">●</div>
                   <div className="flex-1 space-y-3">
-                    <div className="text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                    <div className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                       {t.growth1}
                     </div>
-                    <div className="text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                    <div className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                       {t.growth2}
                     </div>
-                    <div className="text-sm text-[#7d471e] dark:text-[#c9a86c]">
+                    <div className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                       {t.growth3}
                     </div>
                   </div>
@@ -686,31 +686,31 @@ export default function InvestmentLanding({
 
             {/* Investment Thesis */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">{t.investmentThesis}</h3>
-              <div className="rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-zinc-700 p-5">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.investmentThesis}</h3>
+              <div className="rounded-xl border border-emerald-200 dark:border-emerald-700 bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                 <div className="mb-3 text-sm font-semibold text-[#cda22b]">
                   {t.whyInvest}
                 </div>
                 <div className="grid gap-3 md:grid-cols-2">
                   <div className="flex items-start gap-2">
                     <span className="mt-0.5 text-emerald-400">✓</span>
-                    <span className="text-sm text-[#7d471e] dark:text-[#c9a86c]">{t.thesis1}</span>
+                    <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis1}</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="mt-0.5 text-emerald-400">✓</span>
-                    <span className="text-sm text-[#7d471e] dark:text-[#c9a86c]">{t.thesis2}</span>
+                    <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis2}</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="mt-0.5 text-emerald-400">✓</span>
-                    <span className="text-sm text-[#7d471e] dark:text-[#c9a86c]">{t.thesis3}</span>
+                    <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis3}</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="mt-0.5 text-emerald-400">✓</span>
-                    <span className="text-sm text-[#7d471e] dark:text-[#c9a86c]">{t.thesis4}</span>
+                    <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis4}</span>
                   </div>
                   <div className="flex items-start gap-2 md:col-span-2">
                     <span className="mt-0.5 text-emerald-400">✓</span>
-                    <span className="text-sm text-[#7d471e] dark:text-[#c9a86c]">{t.thesis5}</span>
+                    <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis5}</span>
                   </div>
                 </div>
               </div>
@@ -718,9 +718,9 @@ export default function InvestmentLanding({
 
             {/* Team */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">{t.madakFoundingTeam}</h3>
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.madakFoundingTeam}</h3>
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="space-y-3 rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
+                <div className="space-y-3 rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                   <div className="flex items-center gap-3">
                     <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
                       <Image
@@ -732,10 +732,10 @@ export default function InvestmentLanding({
                       />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                      <p className="text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                         Hussain Hameed Aldeen
                       </p>
-                      <p className="text-xs text-slate-600 dark:text-slate-400">{t.hussainTitle}</p>
+                      <p className="text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">{t.hussainTitle}</p>
                       <a
                         href="https://www.linkedin.com/in/hn1na1/"
                         target="_blank"
@@ -746,11 +746,11 @@ export default function InvestmentLanding({
                       </a>
                     </div>
                   </div>
-                  <p className="text-xs leading-relaxed text-[#7d471e] dark:text-[#c9a86c]">
+                  <p className="text-xs leading-relaxed text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.hussainBio}
                   </p>
                 </div>
-                <div className="space-y-3 rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-5">
+                <div className="space-y-3 rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                   <div className="flex items-center gap-3">
                     <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
                       <Image
@@ -762,10 +762,10 @@ export default function InvestmentLanding({
                       />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+                      <p className="text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                         Abdulaziz Alardi
                       </p>
-                      <p className="text-xs text-slate-600 dark:text-slate-400">{t.abdulazizTitle}</p>
+                      <p className="text-xs text-slate-600 dark:text-[var(--dark-text-muted)]">{t.abdulazizTitle}</p>
                       <a
                         href="https://www.linkedin.com/in/abdulaziz-alardi/"
                         target="_blank"
@@ -776,7 +776,7 @@ export default function InvestmentLanding({
                       </a>
                     </div>
                   </div>
-                  <p className="text-xs leading-relaxed text-[#7d471e] dark:text-[#c9a86c]">
+                  <p className="text-xs leading-relaxed text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.abdulazizBio}
                   </p>
                 </div>
@@ -785,8 +785,8 @@ export default function InvestmentLanding({
 
             {/* Recognition */}
             <section className="space-y-4">
-              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c] sm:text-xl">{t.recognition}</h3>
-              <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-zinc-500 bg-white dark:bg-zinc-700 p-6">
+              <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.recognition}</h3>
+              <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-6">
                 <Image
                   src="/recognition-logos.png"
                   alt="Recognition - partner and institutional logos"
@@ -802,25 +802,25 @@ export default function InvestmentLanding({
 
           {/* Right column: highlight card and final CTA */}
           <aside className="space-y-6 lg:sticky lg:top-10">
-            <div className="rounded-3xl border border-emerald-200 dark:border-emerald-700 bg-gradient-to-br from-emerald-50/40 via-white to-amber-50/30 p-6 shadow-[0_0_40px_-8px_rgba(16,185,129,0.25),0_0_20px_-10px_rgba(205,162,43,0.1)] dark:from-emerald-900/20 dark:via-zinc-700 dark:to-zinc-700/80">
+            <div className="rounded-3xl border border-emerald-200 dark:border-[var(--dark-border)] bg-gradient-to-br from-emerald-50/40 via-white to-amber-50/30 p-6 shadow-[0_0_40px_-8px_rgba(16,185,129,0.25),0_0_20px_-10px_rgba(205,162,43,0.1)] dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)]">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#cda22b]">
                 {t.dealSnapshot}
               </p>
-              <div className="mt-5 space-y-3 text-sm text-[#7d471e] dark:text-[#c9a86c]">
+              <div className="mt-5 space-y-3 text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-600 dark:text-slate-400">{t.preValuation}</span>
-                  <span className="font-medium text-[#7d471e] dark:text-[#c9a86c]">$10M</span>
+                  <span className="text-slate-600 dark:text-[var(--dark-text-muted)]">{t.preValuation}</span>
+                  <span className="font-medium text-[#7d471e] dark:text-[var(--dark-text)]">$10M</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-600 dark:text-slate-400">{t.postValuation}</span>
-                  <span className="font-medium text-[#7d471e] dark:text-[#c9a86c]">$10.32M</span>
+                  <span className="text-slate-600 dark:text-[var(--dark-text-muted)]">{t.postValuation}</span>
+                  <span className="font-medium text-[#7d471e] dark:text-[var(--dark-text)]">$10.32M</span>
                 </div>
-                <div className="flex items-center justify-between border-t border-slate-200 dark:border-zinc-500 pt-3">
-                  <span className="text-slate-600 dark:text-slate-400">{t.fundraisingAsk}</span>
+                <div className="flex items-center justify-between border-t border-slate-200 dark:border-[var(--dark-border)] pt-3">
+                  <span className="text-slate-600 dark:text-[var(--dark-text-muted)]">{t.fundraisingAsk}</span>
                   <span className="text-lg font-bold text-[#cda22b]">$150K</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-600 dark:text-slate-400">{t.status}</span>
+                  <span className="text-slate-600 dark:text-[var(--dark-text-muted)]">{t.status}</span>
                   <span className="font-medium text-[#cda22b]">
                     {t.openForInterest}
                   </span>
@@ -834,27 +834,27 @@ export default function InvestmentLanding({
               >
                 {t.expressInterestWhatsApp}
               </a>
-              <p className="mt-3 text-[11px] leading-relaxed text-[#7d471e] dark:text-[#c9a86c]">
+              <p className="mt-3 text-[11px] leading-relaxed text-[#7d471e] dark:text-[var(--dark-text)]">
                 {t.whatsappRedirectNote}
               </p>
             </div>
 
             {/* Final Call To Action */}
-            <div className="rounded-3xl border border-slate-200 dark:border-zinc-500 bg-gradient-to-br from-white to-slate-50/60 p-6 shadow-[0_0_24px_-10px_rgba(125,71,30,0.06)] dark:from-zinc-700 dark:to-zinc-700/80">
-              <h2 className="text-lg font-semibold text-[#7d471e] dark:text-[#c9a86c]">
+            <div className="rounded-3xl border border-slate-200 dark:border-[var(--dark-border)] bg-gradient-to-br from-white to-slate-50/60 p-6 shadow-[0_0_24px_-10px_rgba(125,71,30,0.06)] dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)]">
+              <h2 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                 {t.connectWithFinjan}
               </h2>
-              <p className="mt-2 text-sm text-[#7d471e] dark:text-[#c9a86c]">{t.connectDesc}</p>
+              <p className="mt-2 text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.connectDesc}</p>
               <div className="mt-4 space-y-3 text-sm">
                 <a
                   href={FINJAN_WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center rounded-full border border-emerald-300 bg-white dark:border-emerald-700 dark:bg-zinc-700 px-6 py-2.5 text-sm font-semibold text-[#cda22b] transition hover:bg-amber-50 dark:hover:bg-zinc-600"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-emerald-300 bg-white dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface)] px-6 py-2.5 text-sm font-semibold text-[#cda22b] transition hover:bg-amber-50 dark:hover:bg-[var(--dark-surface-alt)]"
                 >
                   {t.connectWithUs}
                 </a>
-                <div className="space-y-1 text-xs text-[#7d471e] dark:text-[#c9a86c]">
+                <div className="space-y-1 text-xs text-[#7d471e] dark:text-[var(--dark-text)]">
                   <p>
                     {t.website}{" "}
                     <Link
@@ -875,7 +875,7 @@ export default function InvestmentLanding({
                   </p>
                 </div>
               </div>
-              <p className="mt-4 text-[11px] text-[#7d471e] dark:text-[#c9a86c]">{t.legalDisclaimer}</p>
+              <p className="mt-4 text-[11px] text-[#7d471e] dark:text-[var(--dark-text)]">{t.legalDisclaimer}</p>
             </div>
           </aside>
         </main>

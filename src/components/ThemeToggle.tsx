@@ -35,7 +35,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="rounded-full p-2 text-[#7d471e] transition hover:bg-slate-100 hover:text-[#cda22b] dark:text-[#c9a86c] dark:hover:bg-zinc-600 dark:hover:text-[#cda22b]"
+      className="rounded-full p-2 text-[#7d471e] transition hover:bg-slate-100 hover:text-[#cda22b] dark:text-[var(--dark-text)] dark:hover:bg-[var(--dark-surface-alt)] dark:hover:text-[var(--dark-accent)]"
     >
       {isDark ? (
         <svg

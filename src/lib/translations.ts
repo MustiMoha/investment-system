@@ -50,8 +50,8 @@ export const translations = {
     // Unit economics
     madakUnitEconomics: "Madak's Unit Economics",
     lowCac: "Low customer acquisition cost",
-    marketingEfficiency: "Marketing Efficiency",
-    sarRaisedPerSpent: "SAR 17 ($4.54) raised per SAR 1 ($0.27) spent",
+    marketingEfficiency: "LTV/CAC",
+    sarRaisedPerSpent: "SAR 7,000 LTV per SAR 200 CAC",
     // Problem
     problemMadakSolves: "The Problem Madak Solves",
     problemSummary:
@@ -242,8 +242,8 @@ export const translations = {
     // Unit economics
     madakUnitEconomics: "اقتصاديات وحدة مداك",
     lowCac: "تكلفة اكتساب عميل منخفضة",
-    marketingEfficiency: "كفاءة التسويق",
-    sarRaisedPerSpent: "17 ر.س (4.54$) مُجمعة مقابل كل 1 ر.س (0.27$) مُنفق",
+    marketingEfficiency: "LTV/CAC",
+    sarRaisedPerSpent: "7,000 ر.س LTV مقابل 200 ر.س CAC",
     // Problem
     problemMadakSolves: "المشكلة التي تحلها مداك",
     problemSummary:
