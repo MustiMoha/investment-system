@@ -1,43 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useTheme } from "@/components/ThemeProvider";
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    setIsDark(document.documentElement.classList.contains("dark"));
-  }, []);
-
-  function toggle() {
-    const next = !document.documentElement.classList.contains("dark");
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-    setIsDark(next);
-  }
-
-  if (!mounted) {
-    return (
-      <button
-        type="button"
-        aria-label="Toggle theme"
-        className="rounded-full p-2 text-slate-500 opacity-50"
-      >
-        <span className="h-4 w-4" />
-      </button>
-    );
-  }
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button
       type="button"
-      onClick={toggle}
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      onClick={toggleTheme}
+      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       className="rounded-full p-2 text-[#7d471e] transition hover:bg-slate-100 hover:text-[#cda22b] dark:text-[var(--dark-text)] dark:hover:bg-[var(--dark-surface-alt)] dark:hover:text-[var(--dark-accent)]"
     >
-      {isDark ? (
+      {theme === "dark" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
