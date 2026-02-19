@@ -207,7 +207,7 @@ export const translations = {
     heroDesc:
       "مداك منصة تفتح الاستثمار العقاري للأفراد الذين كانوا مستبعدين سابقاً. تجمع مداك بين التكنولوجيا المالية والبنية القانونية وتجربة رقمية سلسة لتحويل المعاملات العقارية المعقدة إلى أسهم متاحة ومدرة للدخل. كل عرض موثق ومنظم وسهل الإدارة.",
     expressInterest: "أبدِ اهتمامك",
-    directConversation: "محادثة مباشرة مع فريق Finjan.vc",
+    directConversation: "محادثة مباشرة مع فريق فنجان.vc",
     noObligation: "بدون التزام – تقديم عبر واتساب",
     // Key highlights
     licensedPlatform: "منصة مرخصة",
@@ -311,7 +311,7 @@ export const translations = {
     grossMargin: "هامش الربح الإجمالي",
     burnRate: "معدل الحرق",
     // Ticket & pricing
-    ticketPricingTitle: "جولة Finjan: التذكرة والتسعير",
+    ticketPricingTitle: "جولة فنجان: التذكرة والتسعير",
     ticketLabel: "التذكرة",
     netInvestLabel: "صافي الاستثمار",
     spvLabel: "SPV",
@@ -330,7 +330,7 @@ export const translations = {
     overviewOfMadak: "نظرة عامة على مداك",
     visitMadak: "زيارة موقعهم",
     viewThePitch: "عرض العرض التقديمي",
-    madakSectionSubtitle: "ما يلي يصف مداك، منصة الملكية العقارية الجزئية التي تستثمر فيها Finjan. كل الأرقام أدناه مقاييس منصة مداك (المشاريع العقارية)، وليست Finjan. شروط استثمارك مع Finjan موضحة أعلاه.",
+    madakSectionSubtitle: "ما يلي يصف مداك، منصة الملكية العقارية الجزئية التي تستثمر فيها فنجان. كل الأرقام أدناه مقاييس منصة مداك (المشاريع العقارية)، وليست فنجان. شروط استثمارك مع فنجان موضحة أعلاه.",
     // Growth strategy
     madakGrowthStrategy: "استراتيجية نمو مداك",
     growth1: "التوسع في أسواق الخليج لاستقطاب الطلب على الاستثمار العقاري الإقليمي",
@@ -338,7 +338,7 @@ export const translations = {
     growth3: "الوصول إلى 2 مليار ر.س (534 مليون$) أصول تحت الإدارة خلال 3 سنوات عبر شراكات استراتيجية وتوسع السوق",
     // Investment thesis
     investmentThesis: "أطروحة الاستثمار",
-    whyInvest: "لماذا تستثمر Finjan في مداك؟",
+    whyInvest: "لماذا تستثمر فنجان في مداك؟",
     thesis1: "جذب مبكر قوي وإيرادات حقيقية",
     thesis2: "منصة مرخصة ومنظمة في سوق عالية النمو",
     thesis3: "اقتصاديات وحدة مثبتة وتنفيذ صفقات سريع",
@@ -367,13 +367,13 @@ export const translations = {
     riskDisclaimer:
       "هذا الملخص لا يشكل مشورة استثمارية ولا عرضاً للاستثمار. عوامل المخاطر الكاملة متوفرة في الوثائق الرسمية.",
     // Sidebar
-    dealSnapshot: "لمحة عن جولة Finjan",
+    dealSnapshot: "لمحة عن جولة فنجان",
     status: "الحالة",
     openForInterest: "مفتوح لتلقي التعبير عن الاهتمام",
     expressInterestWhatsApp: "أبدِ اهتمامك عبر واتساب",
     whatsappRedirectNote:
-      "سيتم توجيهك إلى واتساب للتواصل المباشر مع فريق Finjan.vc والحصول على التفاصيل الكاملة لهذه الفرصة.",
-    connectWithFinjan: "تواصل مع Finjan.vc",
+      "سيتم توجيهك إلى واتساب للتواصل المباشر مع فريق فنجان.vc والحصول على التفاصيل الكاملة لهذه الفرصة.",
+    connectWithFinjan: "تواصل مع فنجان.vc",
     connectDesc:
       "للوصول إلى حزمة الاستثمار الكاملة وغرفة البيانات والشروط التفصيلية، تواصل مع الفريق.",
     connectWithUs: "تواصل معنا",
