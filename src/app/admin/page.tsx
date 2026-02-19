@@ -40,7 +40,7 @@ export default function AdminDashboard() {
             href="/admin/opportunities"
             className="mt-2 text-xs text-[#cda22b] hover:underline"
           >
-            Manage →
+            Manage
           </Link>
         </div>
 
@@ -55,7 +55,7 @@ export default function AdminDashboard() {
             href="/admin/investors"
             className="mt-2 text-xs text-[#cda22b] hover:underline"
           >
-            View All →
+            View All
           </Link>
         </div>
 
@@ -85,7 +85,7 @@ export default function AdminDashboard() {
             href="/admin/analytics"
             className="mt-2 text-xs text-[#cda22b] hover:underline"
           >
-            View Analytics →
+            View Analytics
           </Link>
         </div>
 
@@ -114,19 +114,19 @@ export default function AdminDashboard() {
               href="/admin/opportunities"
               className="block rounded-lg border border-slate-200 dark:border-[var(--dark-border)] bg-slate-50 dark:bg-[var(--dark-surface-alt)] px-4 py-3 text-sm font-medium text-[#7d471e] dark:text-[var(--dark-text)] transition hover:bg-slate-100 dark:hover:bg-[var(--dark-surface-alt)] hover:text-[#cda22b]"
             >
-              ⊕ Create New Opportunity
+              Create New Opportunity
             </Link>
             <Link
               href="/admin/investors"
               className="block rounded-lg border border-slate-200 dark:border-[var(--dark-border)] bg-slate-50 dark:bg-[var(--dark-surface-alt)] px-4 py-3 text-sm font-medium text-[#7d471e] dark:text-[var(--dark-text)] transition hover:bg-slate-100 dark:hover:bg-[var(--dark-surface-alt)] hover:text-[#cda22b]"
             >
-              ○ Add New Investor
+              Add New Investor
             </Link>
             <Link
               href="/admin/analytics"
               className="block rounded-lg border border-slate-200 dark:border-[var(--dark-border)] bg-slate-50 dark:bg-[var(--dark-surface-alt)] px-4 py-3 text-sm font-medium text-[#7d471e] dark:text-[var(--dark-text)] transition hover:bg-slate-100 dark:hover:bg-[var(--dark-surface-alt)] hover:text-[#cda22b]"
             >
-              ▥ View Detailed Analytics
+              View Detailed Analytics
             </Link>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function AdminDashboard() {
               href="/admin/investors"
               className="text-xs text-[#cda22b] hover:underline"
             >
-              View All →
+              View All
             </Link>
           </div>
           {recentInvestors.length === 0 ? (
@@ -179,7 +179,7 @@ export default function AdminDashboard() {
                         rel="noopener noreferrer"
                         className="text-xs text-[#cda22b] hover:underline"
                       >
-                        View Link →
+                        View Link
                       </a>
                     </div>
                   </div>

@@ -115,7 +115,6 @@ export default function InvestmentLanding({
           <section className="space-y-10">
             <div className="flex flex-wrap items-center gap-2">
               <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 dark:border-[var(--dark-border)] bg-gradient-to-r from-emerald-50 to-amber-50/60 px-3 py-1 text-xs font-medium text-[#cda22b] shadow-[0_0_12px_rgba(16,185,129,0.2)] dark:from-[var(--dark-surface-alt)] dark:to-[var(--dark-surface-alt)] dark:text-[var(--dark-accent)]">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_6px_rgba(16,185,129,0.6)]" />
                 {t.liveBadge}
               </div>
               <span className="rounded-full border border-slate-300 dark:border-[var(--dark-border)] bg-white dark:bg-[var(--dark-surface)] px-3 py-1 text-xs font-medium text-[#7d471e] dark:text-[var(--dark-text)]">
@@ -334,12 +333,10 @@ export default function InvestmentLanding({
                 <div className="mt-0.5 text-sm text-slate-500 dark:text-[var(--dark-text-muted)]">{t.fullyAutomated}</div>
               </div>
               <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-4 text-center">
-                <div className="text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-3xl">✓</div>
                 <div className="mt-1 text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">{t.builtInLiquidity}</div>
                 <div className="mt-0.5 text-sm text-slate-500 dark:text-[var(--dark-text-muted)]">{t.resaleMarketplace}</div>
               </div>
               <div className="flex flex-col items-center justify-center rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-4 text-center">
-                <div className="text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-3xl">◎</div>
                 <div className="mt-1 text-sm text-slate-600 dark:text-[var(--dark-text-muted)]">{t.fractionalOwnership}</div>
                 <div className="mt-0.5 text-sm text-slate-500 dark:text-[var(--dark-text-muted)]">{t.fractionalSubtext}</div>
               </div>
@@ -443,7 +440,6 @@ export default function InvestmentLanding({
                         {SAUDI_RIYAL} 200 <span className="text-sm font-normal text-slate-500 dark:text-[var(--dark-text-muted)]">({sarToUsd(200)})</span>
                       </div>
                     </div>
-                    <div className="text-lg text-[#cda22b]">▥</div>
                   </div>
                   <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-200">
                     <div
@@ -463,7 +459,6 @@ export default function InvestmentLanding({
                       </div>
                       <div className="mt-1 text-2xl font-bold text-[#7d471e] dark:text-[var(--dark-text)]">35x</div>
                     </div>
-                    <div className="text-lg text-[#7d471e] dark:text-[var(--dark-text)]">↑</div>
                   </div>
                   <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-200">
                     <div
@@ -492,7 +487,6 @@ export default function InvestmentLanding({
             <section className="space-y-4">
               <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.madakSolution}</h3>
               <div className="rounded-xl border border-emerald-200 dark:border-[var(--dark-border)] bg-gradient-to-br from-emerald-50/40 to-white p-5 shadow-[0_0_24px_-10px_rgba(16,185,129,0.1)] dark:from-[var(--dark-surface-alt)] dark:to-[var(--dark-surface)]">
-                <div className="mb-3 text-lg text-emerald-600">✓</div>
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>
                     <p className="text-sm font-semibold text-[#cda22b]">
@@ -500,19 +494,15 @@ export default function InvestmentLanding({
                     </p>
                     <ul className="mt-2 space-y-1.5 text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                       <li className="flex items-start gap-2">
-                        <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionInvestors1}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionInvestors2}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionInvestors3}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionInvestors4}</span>
                       </li>
                     </ul>
@@ -523,15 +513,12 @@ export default function InvestmentLanding({
                     </p>
                     <ul className="mt-2 space-y-1.5 text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                       <li className="flex items-start gap-2">
-                        <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionDevs1}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionDevs2}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="mt-1 text-emerald-400">✓</span>
                         <span>{t.solutionDevs3}</span>
                       </li>
                     </ul>
@@ -595,7 +582,6 @@ export default function InvestmentLanding({
               <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.madakBusinessModel}</h3>
               <div className="grid gap-4 md:grid-cols-3">
                 <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
-                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[var(--dark-text)]">◎</div>
                   <div className="text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.transactionCommissions}
                   </div>
@@ -604,7 +590,6 @@ export default function InvestmentLanding({
                   </div>
                 </div>
                 <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
-                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[var(--dark-text)]">▫</div>
                   <div className="text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.platformSubscriptions}
                   </div>
@@ -613,7 +598,6 @@ export default function InvestmentLanding({
                   </div>
                 </div>
                 <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
-                  <div className="mb-2 text-lg text-[#7d471e] dark:text-[var(--dark-text)]">▥</div>
                   <div className="text-sm font-semibold text-[#7d471e] dark:text-[var(--dark-text)]">
                     {t.ownershipShareFees}
                   </div>
@@ -670,7 +654,6 @@ export default function InvestmentLanding({
               <h3 className="text-lg font-semibold text-[#7d471e] dark:text-[var(--dark-text)] sm:text-xl">{t.madakGrowthStrategy}</h3>
               <div className="rounded-xl border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] p-5">
                 <div className="flex items-start gap-3">
-                  <div className="text-base text-[#7d471e] dark:text-[var(--dark-text)]">●</div>
                   <div className="flex-1 space-y-3">
                     <div className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">
                       {t.growth1}
@@ -695,23 +678,18 @@ export default function InvestmentLanding({
                 </div>
                 <div className="grid gap-3 md:grid-cols-2">
                   <div className="flex items-start gap-2">
-                    <span className="mt-0.5 text-emerald-400">✓</span>
                     <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis1}</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="mt-0.5 text-emerald-400">✓</span>
                     <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis2}</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="mt-0.5 text-emerald-400">✓</span>
                     <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis3}</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="mt-0.5 text-emerald-400">✓</span>
                     <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis4}</span>
                   </div>
                   <div className="flex items-start gap-2 md:col-span-2">
-                    <span className="mt-0.5 text-emerald-400">✓</span>
                     <span className="text-sm text-[#7d471e] dark:text-[var(--dark-text)]">{t.thesis5}</span>
                   </div>
                 </div>

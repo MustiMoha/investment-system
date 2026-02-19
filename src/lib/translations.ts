@@ -5,18 +5,18 @@ export const translations = {
     // Header
     brandTagline: "Private Investment Opportunity",
     professionalOnly: "Professional Investors Only",
-    personalizedLink: "Personalized Link • Ref:",
+    personalizedLink: "Personalized Link Ref:",
     // Hero
     liveBadge: "Live Investment Opportunity",
     heroTitle1: "Invest in",
     heroTitle2: "Madak",
-    heroTitle3: "Saudi Arabia's First Licensed",
+    heroTitle3: "One of Saudi Arabia's First Licensed",
     heroTitle4: "Fractional Real Estate Platform",
     heroDesc:
       "Madak is a platform that opens real estate investment to individuals who were previously excluded. Madak combines fintech, legal infrastructure, and a seamless digital experience to convert complex real estate transactions into accessible, income-generating shares. Every offering is verified, regulated, and easy to manage.",
     expressInterest: "Express Interest",
     directConversation: "Direct conversation with Finjan.vc team",
-    noObligation: "No obligation • WhatsApp-based introduction",
+    noObligation: "No obligation – WhatsApp-based introduction",
     // Key highlights
     licensedPlatform: "Licensed Platform",
     inSaudiArabia: "In Saudi Arabia",
@@ -46,7 +46,7 @@ export const translations = {
     raisedAcross: "Raised across 2 premium real estate opportunities on Madak's platform",
     returnsDelivered: "Returns delivered to platform investors",
     investorsParticipated: "Platform investors participated",
-    fastestClosed: "▸ Fastest real estate opportunity closed in 90 minutes",
+    fastestClosed: "Fastest real estate opportunity closed in 90 minutes",
     // Unit economics
     madakUnitEconomics: "Madak's Unit Economics",
     lowCac: "Low customer acquisition cost",
@@ -93,16 +93,16 @@ export const translations = {
     feesFromManagement: "Fees from fractional ownership management",
     // Competitive advantages
     madakCompetitiveAdvantages: "Madak's Competitive Advantages",
-    regulatoryAdvantage: "◆ Regulatory Advantage",
+    regulatoryAdvantage: "Regulatory Advantage",
     regulatoryAdvantageDesc:
       "First licensed fractional ownership platform in Saudi Arabia. Regulatory alignment with CMA and REGA.",
-    liquidityAdvantage: "◇ Liquidity Advantage",
+    liquidityAdvantage: "Liquidity Advantage",
     liquidityAdvantageDesc:
       "Built-in resale marketplace for Madak platform investor exits, solving the traditional real estate liquidity problem.",
-    technologyAdvantage: "⚙ Technology Advantage",
+    technologyAdvantage: "Technology Advantage",
     technologyAdvantageDesc:
       "Fully digital investment infrastructure with AI-driven deal sourcing and matching.",
-    marketAdvantage: "▣ Market Advantage",
+    marketAdvantage: "Market Advantage",
     marketAdvantageDesc:
       "Deep developer partnerships with confirmed deals exceeding $100M in real estate assets.",
     // Round (Finjan) / Madak
@@ -197,18 +197,18 @@ export const translations = {
     // Header
     brandTagline: "فرصة استثمارية خاصة",
     professionalOnly: "مستثمرون محترفون فقط",
-    personalizedLink: "رابط شخصي • المرجع:",
+    personalizedLink: "رابط شخصي المرجع:",
     // Hero
     liveBadge: "فرصة استثمارية حية",
     heroTitle1: "استثمر في",
     heroTitle2: "مداك",
-    heroTitle3: "أول منصة مرخصة في المملكة العربية السعودية",
+    heroTitle3: "إحدى أوائل المنصات المرخصة في المملكة العربية السعودية",
     heroTitle4: "للعقارات المقسّمة",
     heroDesc:
       "مداك منصة تفتح الاستثمار العقاري للأفراد الذين كانوا مستبعدين سابقاً. تجمع مداك بين التكنولوجيا المالية والبنية القانونية وتجربة رقمية سلسة لتحويل المعاملات العقارية المعقدة إلى أسهم متاحة ومدرة للدخل. كل عرض موثق ومنظم وسهل الإدارة.",
     expressInterest: "أبدِ اهتمامك",
     directConversation: "محادثة مباشرة مع فريق Finjan.vc",
-    noObligation: "بدون التزام • تقديم عبر واتساب",
+    noObligation: "بدون التزام – تقديم عبر واتساب",
     // Key highlights
     licensedPlatform: "منصة مرخصة",
     inSaudiArabia: "في المملكة العربية السعودية",
@@ -238,7 +238,7 @@ export const translations = {
     raisedAcross: "تم جمعها عبر فرصتين عقاريتين متميزتين على منصة مداك",
     returnsDelivered: "عوائد مُحققة لمستثمري المنصة",
     investorsParticipated: "مستثمرون في المنصة شاركوا",
-    fastestClosed: "▸ أسرع فرصة عقارية أُغلقت في 90 دقيقة",
+    fastestClosed: "أسرع فرصة عقارية أُغلقت في 90 دقيقة",
     // Unit economics
     madakUnitEconomics: "اقتصاديات وحدة مداك",
     lowCac: "تكلفة اكتساب عميل منخفضة",
@@ -285,16 +285,16 @@ export const translations = {
     feesFromManagement: "رسوم من إدارة الملكية الجزئية",
     // Competitive advantages
     madakCompetitiveAdvantages: "مزايا مداك التنافسية",
-    regulatoryAdvantage: "◆ ميزة تنظيمية",
+    regulatoryAdvantage: "ميزة تنظيمية",
     regulatoryAdvantageDesc:
       "أول منصة ملكية جزئية مرخصة في المملكة العربية السعودية. انسجام تنظيمي مع هيئة السوق المالية وريجا.",
-    liquidityAdvantage: "◇ ميزة السيولة",
+    liquidityAdvantage: "ميزة السيولة",
     liquidityAdvantageDesc:
       "سوق إعادة بيع مدمج لخروج مستثمري منصة مداك، يحل مشكلة سيولة العقارات التقليدية.",
-    technologyAdvantage: "⚙ ميزة تقنية",
+    technologyAdvantage: "ميزة تقنية",
     technologyAdvantageDesc:
       "بنية استثمار رقمية بالكامل مع اكتشاف صفقات ومطابقة مدعومة بالذكاء الاصطناعي.",
-    marketAdvantage: "▣ ميزة السوق",
+    marketAdvantage: "ميزة السوق",
     marketAdvantageDesc:
       "شراكات عميقة مع المطورين وصفقات مؤكدة تتجاوز 100 مليون دولار من الأصول العقارية.",
     // Round (Finjan) / Madak

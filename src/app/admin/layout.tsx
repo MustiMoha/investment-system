@@ -12,10 +12,10 @@ export default function AdminLayout({
   const db = readDb();
 
   const navItems = [
-    { href: "/admin", label: "Dashboard", icon: "📊" },
-    { href: "/admin/opportunities", label: "Opportunities", icon: "💼" },
-    { href: "/admin/investors", label: "Investors", icon: "👥" },
-    { href: "/admin/analytics", label: "Analytics", icon: "📈" },
+    { href: "/admin", label: "Dashboard" },
+    { href: "/admin/opportunities", label: "Opportunities" },
+    { href: "/admin/investors", label: "Investors" },
+    { href: "/admin/analytics", label: "Analytics" },
   ];
 
   return (
@@ -57,8 +57,7 @@ export default function AdminLayout({
               href={item.href}
               className="flex items-center gap-2 rounded-lg border border-slate-200 dark:border-[var(--dark-border)] bg-white dark:bg-gradient-to-b dark:from-[var(--dark-surface-alt)] dark:via-[var(--dark-surface)] dark:to-[var(--dark-surface)] px-4 py-2 text-sm font-medium text-[#7d471e] dark:text-[var(--dark-text)] transition hover:bg-slate-50 dark:hover:bg-[var(--dark-surface-alt)] hover:text-[#cda22b] dark:hover:text-[var(--dark-accent)]"
             >
-              <span>{item.icon}</span>
-              <span>{item.label}</span>
+              {item.label}
             </Link>
           ))}
         </nav>
